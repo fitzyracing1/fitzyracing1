@@ -1,0 +1,10 @@
+{
+  "project": "computer_science_implementation",
+  "archive": "computer_science_implementation.zip",
+  "includes": [
+    "mission_planner",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

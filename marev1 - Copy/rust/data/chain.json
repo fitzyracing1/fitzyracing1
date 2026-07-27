@@ -1,0 +1,52 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": 1775582261,
+      "transactions": [
+        {
+          "from": "SYSTEM",
+          "to": "0x6ae05dcd77b98876098d741d43d61d5c99f20a7b",
+          "amount": 1000000.0,
+          "fee": 0.0
+        }
+      ],
+      "previous_hash": "0",
+      "hash": "8632861c51219f8c6a033791bbe007733da1f41852bd6b235d85ba7393d43349",
+      "nonce": 0
+    },
+    {
+      "index": 1,
+      "timestamp": 1775582261,
+      "transactions": [
+        {
+          "from": "0x6ae05dcd77b98876098d741d43d61d5c99f20a7b",
+          "to": "0x3bc51062973c458d5a6f2d8d64a023246354ad7e",
+          "amount": 250.0,
+          "fee": 2.5
+        },
+        {
+          "from": "0x3bc51062973c458d5a6f2d8d64a023246354ad7e",
+          "to": "0xcd9fb1e148ccd8442e5aa74904cc73bf6fb54d1d",
+          "amount": 40.0,
+          "fee": 0.8
+        },
+        {
+          "from": "SYSTEM",
+          "to": "0xe7bf0ad16f54be7ffd065f4c4b638a7e0c48a858",
+          "amount": 13.3,
+          "fee": 0.0
+        }
+      ],
+      "previous_hash": "8632861c51219f8c6a033791bbe007733da1f41852bd6b235d85ba7393d43349",
+      "hash": "00b30b7868ce26b8254898a29ccd6fccdeef946bbb526003541eec89a75c1533",
+      "nonce": 89
+    }
+  ],
+  "pending_transactions": [],
+  "difficulty": 2,
+  "mining_reward": 10.0,
+  "coin_name": "Mare Coin",
+  "coin_symbol": "MARE",
+  "total_supply": 1000000.0
+}

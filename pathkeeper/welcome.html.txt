@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body{font:15px system-ui;margin:24px;line-height:1.5}
+    h1{font-size:22px}
+  </style>
+</head>
+<body>
+  <h1>Welcome to Pathkeeper</h1>
+  <p>Two hotkeys to reduce your web memory fatigue:</p>
+  <ul>
+    <li><b>Alt+S</b> — Save this page/step</li>
+    <li><b>Alt+K</b> — Open a saved step for this site</li>
+  </ul>
+  <p>Try it now: go to any page, press Alt+S, give it a label, then press Alt+K to return.</p>
+</body>
+</html>

@@ -1,0 +1,129 @@
+import json
+import os
+import random
+
+class ProceduralEngine:
+    def __init__(self, episodes_folder="episodes", profile_file="profile.json", seed=None):
+        self.episodes_folder = episodes_folder
+        self.profile_file = profile_file
+        self.state = {}
+        self.profile = self.load_profile()
+        if seed is not None:
+            random.seed(seed)
+
+    def load_profile(self):
+        if os.path.exists(self.profile_file):
+            with open(self.profile_file, "r") as f:
+                return json.load(f)
+        return {"unlocks": [], "stats": {"runs": 0, "victories": 0}}
+
+    def save_profile(self):
+        with open(self.profile_file, "w") as f:
+            json.dump(self.profile, f, indent=2)
+
+    def update_profile(self, run_result):
+        self.profile["stats"]["runs"] += 1
+        if run_result.get("ending") == "victory":
+            self.profile["stats"]["victories"] += 1
+        if run_result.get("ending") == "victory" and "Saboteur" not in self.profile["unlocks"]:
+            self.profile["unlocks"].append("Saboteur")
+        self.save_profile()
+
+    def list_episodes(self):
+        return [f for f in os.listdir(self.episodes_folder) if f.endswith(".json")]
+
+    def load_episode(self, filename):
+        with open(os.path.join(self.episodes_folder, filename), "r") as f:
+            return json.load(f)
+
+    def run_episode(self, episode_data):
+        self.state = {
+            "morale": 5,
+            "resources": 2,
+            "intel": 0,
+            "time": 0,
+            "alive": True,
+            "ending": None
+        }
+
+        non_final = [e for e in episode_data if e["id"] != "crash_site"]
+        final_event = [e for e in episode_data if e["id"] == "crash_site"][0]
+        random.shuffle(non_final)
+        ordered_events = non_final + [final_event]
+
+        for ev in ordered_events:
+            self.handle_event(ev)
+            if not self.state["alive"]:
+                break
+
+        if not self.state["ending"]:
+            self.state["ending"] = "defeat" if not self.state["alive"] else "pyrrhic"
+
+        return self.state
+
+    def handle_event(self, event):
+        print(f"\n--- {event['title']} ---")
+        print(event["description"])
+
+        available = []
+        for c in event["choices"]:
+            reqs = c.get("requirements", {})
+            if all(self.state.get(k, 0) >= v for k, v in reqs.items()):
+                available.append(c)
+
+        for i, c in enumerate(available, 1):
+            print(f"{i}. {c['text']}")
+
+        while True:
+            try:
+                sel = int(input("> ")) - 1
+                if 0 <= sel < len(available):
+                    choice = available[sel]
+                    break
+            except ValueError:
+                pass
+            print("Invalid choice.")
+
+        for k, v in choice.get("effects", {}).items():
+            if k == "ending":
+                self.state["ending"] = v
+            else:
+                self.state[k] = self.state.get(k, 0) + v
+
+        print(choice["flavor"])
+
+        risk = choice.get("effects", {}).get("risk", 0)
+        if risk > 0 and random.random() < risk:
+            print("You were injured!")
+            self.state["morale"] -= 1
+            if self.state["morale"] <= 0:
+                self.state["alive"] = False
+
+    def generate_epilogue(self):
+        if not self.state.get("alive", True) or self.state.get("morale", 0) <= 0:
+            return "The black smoke rolled in. Silence followed."
+        ending = self.state.get("ending")
+        if ending == "victory":
+            return "The cylinder’s song died. Reinforcements are on the move."
+        elif ending == "pyrrhic":
+            return "You lived to see the smoke rise over the capital."
+        else:
+            return "You slip away into the night, the war far from over."
+
+
+if __name__ == "__main__":
+    engine = ProceduralEngine()
+    episodes = engine.list_episodes()
+    if not episodes:
+        print("No episodes found in 'episodes' folder.")
+        exit()
+
+    ep_file = random.choice(episodes)
+    episode_data = engine.load_episode(ep_file)
+
+    result_state = engine.run_episode(episode_data)
+    print("\n=== EPILOGUE ===")
+    print(engine.generate_epilogue())
+
+    engine.update_profile(result_state)
+    print("\nProfile updated:", engine.profile)

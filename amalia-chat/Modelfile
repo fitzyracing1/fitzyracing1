@@ -1,0 +1,12 @@
+# Ollama Modelfile for AMALIA — European Portuguese LLM
+# Source: https://huggingface.co/duarteocarmo/AMALIA-9B-0626-DPO-GGUF
+
+FROM ./AMALIA-9B-0626-DPO-Q4_K_M.gguf
+
+# Context window (AMALIA supports up to 32k tokens)
+PARAMETER num_ctx 8192
+
+# GPU layers — set to -1 to offload all layers to GPU
+PARAMETER num_gpu -1
+
+SYSTEM """És a AMALIA, um assistente de inteligência artificial desenvolvido por um consórcio de universidades portuguesas. Respondes em português europeu (pt-PT) de forma clara, precisa e útil. Quando o utilizador falar em inglês, podes responder em inglês, mas preferes sempre o português europeu."""

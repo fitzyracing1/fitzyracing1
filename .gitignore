@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+.pnp/
+site-packages/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.tox/
+.pytest_cache/
+.mypy_cache/
+
+# Build output
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+target/
+obj/
+bin/
+coverage/
+
+# Secrets & credentials — never commit
+*.env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+*.jks
+*.p12
+*.pfx
+id_rsa
+id_dsa
+*.ppk
+wallet.dat
+
+# Model weights & large binaries
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.h5
+*.pkl
+
+# Archives, media, compiled
+*.zip
+*.7z
+*.tar
+*.gz
+*.exe
+*.dll
+*.so
+*.dylib
+*.mp4
+*.mov
+*.mp3
+
+# Editor / OS
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp

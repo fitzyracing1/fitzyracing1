@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earthenware Launch — Base ERC-20 + Built-in Airdrop</title>
+<meta name="description" content="Launch a Base ERC-20 token with a Merkle airdrop in one flow. Configure recipients, share one claim link, recipients claim themselves. Built on Base, contracts open-source.">
+<link rel="canonical" href="https://launch.earthenwarecomputer.com/">
+<style>
+:root {
+  --bg: #07080f;
+  --surface: #0e1018;
+  --surface-2: #14172a;
+  --border: #1e2133;
+  --cyan: #7df7ff;
+  --pink: #ff6b9d;
+  --yellow: #ffe66d;
+  --green: #a8ff78;
+  --red: #ff6b6b;
+  --text: #c8cfe0;
+  --muted: #5a6080;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; min-height: 100%; }
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: #fff; }
+
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; background: rgba(7,8,15,0.92); backdrop-filter: blur(12px); z-index: 100;
+}
+.logo { font-family: monospace; font-size: 18px; color: var(--cyan); font-weight: bold; letter-spacing: 2px; }
+.logo span { color: var(--pink); }
+.nav-links { display: flex; gap: 24px; align-items: center; font-size: 14px; }
+.nav-links a { color: var(--text); }
+.nav-links a:hover { color: var(--cyan); }
+.nav-cta {
+  background: var(--cyan); color: #000 !important; padding: 8px 18px; border-radius: 6px;
+  font-weight: 600; font-size: 13px;
+}
+.nav-cta:hover { background: #fff; }
+
+.shell { max-width: 980px; margin: 0 auto; padding: 48px 32px 80px; }
+
+.hero {
+  text-align: center; padding: 36px 0 56px;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, #0d1a2e 0%, transparent 70%);
+}
+.hero-eyebrow {
+  display: inline-block; padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px;
+  font-family: monospace; font-size: 11px; color: var(--cyan); letter-spacing: 2px; margin-bottom: 18px;
+}
+.hero h1 { font-size: 40px; line-height: 1.15; font-weight: 700; color: #fff; margin-bottom: 14px; }
+.hero h1 .accent { color: var(--cyan); }
+.hero p { color: var(--muted); font-size: 16px; max-width: 580px; margin: 0 auto; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 24px; margin-bottom: 20px;
+}
+.card h2 {
+  font-size: 14px; font-family: monospace; color: var(--cyan); letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.card-help { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
+.card-help code { font-family: 'JetBrains Mono', Consolas, monospace; background: var(--surface-2); padding: 1px 6px; border-radius: 3px; color: var(--text); font-size: 12px; }
+
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.connect-row { gap: 14px; align-items: center; }
+
+button, .btn {
+  cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 600;
+  padding: 10px 18px; border-radius: 7px; border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--text); transition: all .15s;
+}
+button:hover, .btn:hover { border-color: var(--cyan); color: #fff; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button:disabled:hover { border-color: var(--border); color: var(--text); }
+
+.btn-primary {
+  background: var(--cyan); color: #000; border-color: var(--cyan); font-weight: 700;
+}
+.btn-primary:hover { background: #fff; border-color: #fff; color: #000; }
+.btn-primary:disabled { background: var(--cyan); color: #000; opacity: 0.4; }
+
+.btn-ghost { background: transparent; }
+.btn-ghost:hover { border-color: #fff; color: #fff; background: transparent; }
+
+.tag {
+  display: inline-block; padding: 4px 10px; border-radius: 999px; font-family: monospace;
+  font-size: 11px; letter-spacing: 1.5px; background: var(--surface-2); color: var(--muted);
+}
+.tag.ok { color: var(--green); border: 1px solid #2a4633; }
+.tag.warn { color: var(--yellow); border: 1px solid #463e2a; }
+.tag.err { color: var(--red); border: 1px solid #4a2a2a; }
+
+label {
+  display: block; font-family: monospace; font-size: 11px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;
+}
+
+.input, input[type=text], input[type=number], textarea {
+  width: 100%; background: var(--bg); color: var(--text); border: 1px solid var(--border);
+  border-radius: 7px; padding: 11px 14px; font-size: 14px; font-family: inherit;
+  transition: border-color .15s;
+}
+.input:focus, input:focus, textarea:focus { outline: none; border-color: var(--cyan); }
+textarea { resize: vertical; line-height: 1.55; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; }
+
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.field-readout {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 7px;
+  padding: 10px 14px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px;
+  color: var(--text); word-break: break-all; min-height: 38px;
+}
+.field-readout.dim { color: var(--muted); }
+
+.section-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+.section-title-row h2 { margin-bottom: 4px; }
+
+.steps {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px;
+  margin-bottom: 24px;
+}
+.step {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 16px;
+}
+.step-num {
+  display: inline-block; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--cyan); color: #000; font-weight: 700; font-family: monospace;
+  text-align: center; line-height: 26px; font-size: 13px; margin-bottom: 8px;
+}
+.step-title { font-weight: 600; color: #fff; margin-bottom: 4px; font-size: 14px; }
+.step-desc { color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+
+.card-num {
+  display: inline-block; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--surface-2); color: var(--cyan); font-weight: 700; font-family: monospace;
+  text-align: center; line-height: 22px; font-size: 12px; margin-right: 8px;
+  vertical-align: 2px;
+}
+
+.actions-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+
+.status-line {
+  font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px;
+  color: var(--muted); margin-top: 12px; min-height: 18px;
+  white-space: pre-wrap;
+}
+.status-line.ok { color: var(--green); }
+.status-line.warn { color: var(--yellow); }
+.status-line.err { color: var(--red); }
+
+.result-box {
+  display: none; margin-top: 18px; padding: 16px;
+  background: rgba(125, 247, 255, 0.04); border: 1px solid rgba(125, 247, 255, 0.25); border-radius: 8px;
+}
+.result-box.shown { display: block; }
+.result-box .label { color: var(--cyan); }
+
+footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; text-align: center; }
+
+@media (max-width: 720px) {
+  .hero h1 { font-size: 30px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  nav { padding: 14px 18px; }
+  .shell { padding: 24px 18px 60px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://earthenwarecomputer.com" class="logo" style="color: var(--cyan);">EARTH<span>WARE</span></a>
+  <div class="nav-links">
+    <a href="https://earthenwarecomputer.com">3XB</a>
+    <a href="claim.html">Claim Airdrop</a>
+    <a href="https://github.com/fitzyracing1/marev" target="_blank">GitHub ↗</a>
+  </div>
+</nav>
+
+<div class="shell">
+
+  <div class="hero">
+    <span class="hero-eyebrow">// LAUNCH + AIRDROP</span>
+    <h1>Ship a <span class="accent">Base ERC-20</span><br>with a built-in airdrop.</h1>
+    <p>Create the token, deploy a Merkle distributor, fund it, publish a claim link — in one flow. Recipients claim themselves with one transaction.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div class="step-title">Connect wallet</div>
+      <div class="step-desc">Connect Wallet on Base. Need ~0.001 ETH for the launch fee plus a tiny bit of gas.</div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div class="step-title">Define your token</div>
+      <div class="step-desc">Pick a name, ticker symbol, decimals (usually 18), and total supply.</div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div class="step-title">Add recipients</div>
+      <div class="step-desc">Paste one wallet per line as <code>address,amount</code>. They'll be eligible to claim their share.</div>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <div class="step-title">Launch + share</div>
+      <div class="step-desc">Hit Launch, confirm 3 wallet popups, get a shareable claim URL. Recipients claim themselves.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="card-num">1</span>// WALLET</h2>
+    <div class="row connect-row">
+      <button id="connectButton" class="btn-primary">Connect Wallet</button>
+      <button id="switchBaseButton">Switch to Base</button>
+      <span id="status" class="tag">DISCONNECTED</span>
+    </div>
+    <div class="grid" style="margin-top: 18px;">
+      <div>
+        <label>Wallet</label>
+        <div id="account" class="field-readout dim">—</div>
+      </div>
+      <div>
+        <label>Network</label>
+        <div id="network" class="field-readout dim">—</div>
+      </div>
+      <div>
+        <label>Launch Fee</label>
+        <div id="launchFee" class="field-readout dim">—</div>
+      </div>
+    </div>
+    <p id="contractStatus" class="status-line">Loading deployment configuration…</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="card-num">2</span>// TOKEN DETAILS</h2>
+    <p class="card-help">Standard ERC-20 contract. The full supply mints to your wallet first; later, the airdrop allocation is transferred from your wallet to the distributor automatically. <strong>Decimals</strong> is almost always <code>18</code> — leave it unless you know why you'd change it.</p>
+    <div class="grid">
+      <div>
+        <label for="tokenName">Name</label>
+        <input id="tokenName" type="text" placeholder="e.g. Pepe Coin" />
+      </div>
+      <div>
+        <label for="tokenSymbol">Symbol</label>
+        <input id="tokenSymbol" type="text" placeholder="e.g. PEPE" />
+      </div>
+      <div>
+        <label for="tokenDecimals">Decimals</label>
+        <input id="tokenDecimals" type="number" value="18" min="1" max="18" />
+      </div>
+      <div>
+        <label for="tokenSupply">Total Supply</label>
+        <input id="tokenSupply" type="number" placeholder="1000000" min="0" />
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="card-num">3</span>// AIRDROP RECIPIENTS</h2>
+    <p class="card-help">Who gets free tokens. Format: <code>address,amount</code> — one per line. Amount is in human units, not wei. <code>500</code> means 500 tokens (the contract handles decimals). Lines starting with <code>#</code> are comments. Click <strong>Validate Recipients</strong> to compute the Merkle root before launching.</p>
+    <textarea id="recipientList" rows="9" spellcheck="false" placeholder="# One recipient per line as: wallet_address,amount
+# Example:
+0x4253AaCA78419dd5d82A74708c29c6Bdfe325565,100
+0xDD0C7e78229672Af3103d4771238ab3A384c5083,50
+
+# Replace these with your real list, or click 'Load Sample List' below."></textarea>
+    <div class="actions-row">
+      <button id="loadSampleButton" class="btn-ghost">Load Sample List (Easy Mode)</button>
+      <button id="validateRecipientsButton">Validate Recipients</button>
+    </div>
+    <p class="card-help" style="margin: 12px 0 0; font-size: 12px;">
+      Tip: click <strong>Load Sample List</strong> first to see a working example with your wallet on it. Edit it to your real recipients, then click <strong>Validate Recipients</strong> to compute the Merkle root.
+    </p>
+    <div class="grid" style="margin-top: 18px;">
+      <div>
+        <label>Recipients</label>
+        <div id="recipientCount" class="field-readout dim">—</div>
+      </div>
+      <div>
+        <label>Total Airdrop</label>
+        <div id="recipientTotal" class="field-readout dim">—</div>
+      </div>
+      <div>
+        <label>Creator Keeps</label>
+        <div id="creatorKeeps" class="field-readout dim">—</div>
+      </div>
+      <div>
+        <label>Merkle Root</label>
+        <div id="merkleRootDisplay" class="field-readout dim">—</div>
+      </div>
+    </div>
+    <p id="recipientStatus" class="status-line"></p>
+  </div>
+
+  <div class="card">
+    <h2><span class="card-num">4</span>// CLAIM WINDOW <span style="font-size: 11px; color: var(--muted); letter-spacing: 0;">(optional)</span></h2>
+    <p class="card-help">How long recipients have to claim. After this window passes, you (the creator) can call <code>sweep()</code> on the distributor to recover unclaimed tokens. Leave blank if you want claims to stay open forever.</p>
+    <div class="grid">
+      <div>
+        <label for="expiryDays">Days Until Expiry</label>
+        <input id="expiryDays" type="number" min="0" placeholder="e.g. 30" />
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="card-num">5</span>// LAUNCH</h2>
+    <p class="card-help">When you click below, you'll see <strong>3 wallet popups in sequence</strong>:<br>
+    &nbsp;&nbsp;1. Deploy your ERC-20 token (you pay the launch fee).<br>
+    &nbsp;&nbsp;2. Deploy a Merkle distributor for the airdrop.<br>
+    &nbsp;&nbsp;3. Transfer the airdrop allocation from your wallet into the distributor.<br>
+    Then we publish your Merkle data and give you a public claim URL to share. <strong>Total cost:</strong> launch fee (above) + about $0.50 of Base gas. Stay on the page until you see the green result box.</p>
+    <div class="actions-row">
+      <button id="launchButton" class="btn-primary">Launch + Setup Airdrop</button>
+    </div>
+    <p id="launchStatus" class="status-line"></p>
+    <div id="launchResult" class="result-box">
+      <div class="grid">
+        <div>
+          <label class="label">Token Address</label>
+          <div id="resultTokenAddress" class="field-readout">—</div>
+        </div>
+        <div>
+          <label class="label">Distributor Address</label>
+          <div id="resultDistributorAddress" class="field-readout">—</div>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label class="label">Shareable Claim Link</label>
+          <div id="resultClaimLink" class="field-readout">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Built on Base. Contracts:
+    <a href="https://basescan.org/address/0x878626f220302f0F409F009fb3D4FB8b511A4faE" target="_blank">Token Factory</a> ·
+    <a href="https://basescan.org/address/0xDD591a17E6Af45451BA93e3aC9E30F62db93ad55" target="_blank">Distributor Factory</a>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+<script src="launch.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+node: space.core
+id: problem_space
+coordinates: symbolic.graph
+allowed_methods:
+  - analyze
+  - decompose
+boundaries: []
+rules: []

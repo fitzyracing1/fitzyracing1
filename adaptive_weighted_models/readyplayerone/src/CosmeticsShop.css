@@ -1,0 +1,216 @@
+.cosmetics-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  backdrop-filter: blur(8px);
+}
+
+.cosmetics-modal {
+  background: rgba(0, 20, 40, 0.95);
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.cosmetics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.cosmetics-header h2 {
+  margin: 0;
+  color: #ffd700;
+  font-size: 2rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.gold-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.gold-balance span {
+  color: #b9c7de;
+}
+
+.gold-balance strong {
+  color: #ffd700;
+  font-size: 1.3rem;
+}
+
+.cosmetics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.cosmetic-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cosmetic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cosmetic-card.rarity-common {
+  border-color: rgba(150, 150, 150, 0.5);
+}
+
+.cosmetic-card.rarity-rare {
+  border-color: #00ffff;
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.cosmetic-card.rarity-epic {
+  border-color: #9d4edd;
+  background: rgba(157, 78, 221, 0.05);
+}
+
+.cosmetic-card.rarity-legendary {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.cosmetic-icon {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.cosmetic-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.description {
+  margin: 0;
+  color: #b9c7de;
+  font-size: 0.9rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.rarity-badge {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+}
+
+.cosmetic-card.rarity-common .rarity-badge {
+  background: rgba(150, 150, 150, 0.2);
+  color: #999;
+}
+
+.cosmetic-card.rarity-rare .rarity-badge {
+  background: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+}
+
+.cosmetic-card.rarity-epic .rarity-badge {
+  background: rgba(157, 78, 221, 0.2);
+  color: #c77dff;
+}
+
+.cosmetic-card.rarity-legendary .rarity-badge {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+.buy-btn,
+.free-btn {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.buy-btn.affordable {
+  background: rgba(0, 255, 100, 0.2);
+  border-color: #00ff64;
+  color: #00ff64;
+}
+
+.buy-btn.affordable:hover {
+  background: rgba(0, 255, 100, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 100, 0.4);
+}
+
+.buy-btn.locked {
+  background: rgba(100, 100, 100, 0.2);
+  border-color: #666;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.free-btn {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+@media (max-width: 600px) {
+  .cosmetics-modal {
+    padding: 1.5rem;
+  }
+
+  .cosmetics-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>body{font:13px system-ui;margin:12px;min-width:260px}</style>
+</head>
+<body>
+  <h3>Pathkeeper</h3>
+  <p><b>Save step:</b> Alt+S &nbsp; <button id="btnSave">Save Now</button><br>
+     <b>Open paths:</b> Alt+K &nbsp; <button id="btnOpen">Open List</button></p>
+  <div id="domain"></div>
+  <div id="list" style="margin-top:8px"></div>
+  <script>
+    function render(domain) {
+      document.getElementById('domain').textContent = domain ? ('Domain: ' + domain) : '';
+      chrome.storage.local.get(['paths'], data => {
+        const paths = (data.paths||{})[domain]||[];
+        document.getElementById('list').innerHTML =
+          paths.slice().reverse().map(p=>`<div>- ${p.note||p.title}</div>`).join('') ||
+          'No saved paths yet.';
+      });
+    }
+
+    chrome.tabs.query({active:true,currentWindow:true}, tabs => {
+      const tab = tabs && tabs[0];
+      let domain = '';
+      try {
+        domain = new URL(tab && tab.url || '').hostname;
+      } catch {}
+      render(domain);
+
+      document.getElementById('btnSave').onclick = () => {
+        if (!tab || !tab.id) return;
+        chrome.tabs.sendMessage(tab.id, { type: 'save_step' });
+        setTimeout(()=>render(domain), 400);
+      };
+      document.getElementById('btnOpen').onclick = () => {
+        if (!tab || !tab.id) return;
+        chrome.tabs.sendMessage(tab.id, { type: 'open_paths' });
+      };
+    });
+  </script>
+</body>
+</html>

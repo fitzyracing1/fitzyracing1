@@ -1,0 +1,10 @@
+{
+  "project": "models_hugging_face_implementation",
+  "archive": "models_hugging_face_implementation.zip",
+  "includes": [
+    "mission_planner",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

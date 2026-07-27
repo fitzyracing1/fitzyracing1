@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Binary Blocks",
+			"type": "shell",
+			"command": "C:/Users/EC/ac/.venv/Scripts/python.exe binary_blocks.py",
+			"group": "build"
+		}
+	]
+}

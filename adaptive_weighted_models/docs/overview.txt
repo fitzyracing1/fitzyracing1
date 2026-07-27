@@ -1,0 +1,1 @@
+Adaptive weighted models combine multiple module predictions into one output. Drift detection monitors performance and triggers warm-start retraining when recent error increases. The meta layer applies context-aware softmax weights over module scores.

@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "git-status-check",
+			"type": "shell",
+			"command": "git status -sb"
+		},
+		{
+			"label": "git-commit-all",
+			"type": "shell",
+			"command": "git add -A && git commit -m \"Initial commit\""
+		},
+		{
+			"label": "git-status-post-commit",
+			"type": "shell",
+			"command": "git status -sb"
+		},
+		{
+			"label": "git-config-check",
+			"type": "shell",
+			"command": "git config user.name && git config user.email"
+		},
+		{
+			"label": "git-commit-all-2",
+			"type": "shell",
+			"command": "git add -A; git commit -m \"Initial commit\"; git status -sb"
+		}
+	]
+}

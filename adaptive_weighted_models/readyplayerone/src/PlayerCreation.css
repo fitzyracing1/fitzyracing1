@@ -1,0 +1,167 @@
+.player-creation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.player-creation-modal {
+  background: rgba(0, 20, 40, 0.95);
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.player-creation-modal h2 {
+  color: #00ffff;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.player-creation-modal > p {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-group input[type='text'] {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input[type='text']:focus {
+  outline: none;
+  border-color: #00ffff;
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.form-group input[type='text']:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.faction-choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.faction-option {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.faction-option input {
+  appearance: none;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.faction-badge {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.faction-option.selected .faction-badge {
+  border-color: #fff;
+  box-shadow: 0 0 10px currentColor;
+  transform: scale(1.05);
+}
+
+.faction-option span {
+  font-size: 0.85rem;
+  color: #aaa;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.faction-option.selected span {
+  opacity: 1;
+  color: #fff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1.5rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 23, 68, 0.2);
+  border: 1px solid #ff1744;
+  border-radius: 4px;
+  color: #ff6b80;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .player-creation-modal {
+    padding: 1.5rem;
+  }
+
+  .faction-choices {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "Unity",
+  "description": "Unity C# project generated code",
+  "path": "c:\\Users\\EC\\dev",
+  "projects": [
+    {
+      "path": "Assembly-CSharp.csproj",
+      "frameworks": ["net4.7.1"]
+    }
+  ]
+}

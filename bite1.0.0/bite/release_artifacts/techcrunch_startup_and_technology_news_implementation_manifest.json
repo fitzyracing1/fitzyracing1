@@ -1,0 +1,10 @@
+{
+  "project": "techcrunch_startup_and_technology_news_implementation",
+  "archive": "techcrunch_startup_and_technology_news_implementation.zip",
+  "includes": [
+    "mission_planner",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

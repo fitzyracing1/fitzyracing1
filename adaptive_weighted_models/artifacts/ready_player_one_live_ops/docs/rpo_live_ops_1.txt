@@ -1,0 +1,1 @@
+Seasonal leaderboard drift changes which loadouts dominate. Models should adapt across seasons instead of overfitting one patch cycle.

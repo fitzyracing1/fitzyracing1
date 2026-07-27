@@ -1,0 +1,23 @@
+import { encryptData, decryptData } from "./crypto.js";
+
+const passphrase = "your‑chosen‑passphrase"; // prompt user on first run
+
+async function savePaths(paths) {
+  const encrypted = await encryptData(passphrase, paths);
+  chrome.storage.sync.set({ paths: encrypted });
+}
+
+async function loadPaths() {
+  return new Promise(resolve => {
+    chrome.storage.sync.get("paths", async data => {
+      if (!data.paths) return resolve({});
+      try {
+        const decrypted = await decryptData(passphrase, data.paths);
+        resolve(decrypted);
+      } catch (e) {
+        console.error("Decryption failed", e);
+        resolve({});
+      }
+    });
+  });
+}

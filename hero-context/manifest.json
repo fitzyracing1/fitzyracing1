@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Hero Context",
+  "version": "1.0",
+  "description": "Applies Hero scoring to Google search results using linear division from root.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hero Context"
+  }
+}

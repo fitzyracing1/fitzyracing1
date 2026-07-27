@@ -1,0 +1,18 @@
+[
+  {
+    "wallet": "0x4253AaCA78419dd5d82A74708c29c6Bdfe325565",
+    "score": "500",
+    "amountWei": "100000000000000000000",
+    "createdTokens": [
+      {
+        "tokenAddress": "0xDD0C7e78229672Af3103d4771238ab3A384c5083",
+        "createdAt": "1774881069"
+      }
+    ],
+    "listedTokens": [
+      "0xDD0C7e78229672Af3103d4771238ab3A384c5083"
+    ],
+    "source": "factory",
+    "day": "2"
+  }
+]

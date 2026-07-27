@@ -1,0 +1,10 @@
+node: method.core
+id: analyze
+signature: problem_space -> analysis_space
+preconditions:
+  - problem_space.has(:root_problem)
+postconditions:
+  - analysis_space.has(:analysis_for_root)
+traps:
+  - unstructured_problem
+transform_ref: impl.analyze

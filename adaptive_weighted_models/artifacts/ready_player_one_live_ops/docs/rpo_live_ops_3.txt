@@ -1,0 +1,1 @@
+Raid role balancing should reward healthy composition: support and tank roles reduce wipe risk, while over-indexing scouts can increase volatility.

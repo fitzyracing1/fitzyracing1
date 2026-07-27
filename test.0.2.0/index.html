@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Life</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="sim-panel" aria-label="Artificial life simulation">
+        <canvas id="world" width="960" height="640"></canvas>
+        <div class="toolbar" aria-label="Simulation controls">
+          <button id="toggle" class="primary" type="button">Pause</button>
+          <button id="seed" type="button">Seed</button>
+          <button id="clear" type="button">Reset</button>
+          <label>
+            Energy
+            <input id="foodRate" type="range" min="2" max="38" value="16">
+          </label>
+          <label>
+            Speed
+            <input id="speed" type="range" min="1" max="6" value="3">
+          </label>
+        </div>
+      </section>
+
+      <aside class="side-panel" aria-label="World status">
+        <header>
+          <p class="eyebrow">Computer Life</p>
+          <h1>Watch tiny programs adapt.</h1>
+        </header>
+
+        <dl class="stats">
+          <div>
+            <dt>Population</dt>
+            <dd id="population">0</dd>
+          </div>
+          <div>
+            <dt>Generation</dt>
+            <dd id="generation">0</dd>
+          </div>
+          <div>
+            <dt>Food</dt>
+            <dd id="food">0</dd>
+          </div>
+          <div>
+            <dt>Oldest</dt>
+            <dd id="oldest">0</dd>
+          </div>
+        </dl>
+
+        <section class="gene-box" aria-label="Dominant genes">
+          <h2>Dominant Strain</h2>
+          <div id="dominant" class="dominant"></div>
+        </section>
+
+        <section class="log-box" aria-label="World events">
+          <h2>Events</h2>
+          <ol id="events"></ol>
+        </section>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

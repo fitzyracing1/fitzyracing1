@@ -1,0 +1,151 @@
+.raid-matcher-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.raid-matcher-modal {
+  background: rgba(0, 20, 40, 0.95);
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.raid-matcher-modal h3 {
+  color: #ffd700;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.raid-matcher-modal > p {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.role-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.role-card {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.role-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.role-card.selected {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.role-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 0.5rem;
+  background: rgba(255, 215, 0, 0.2);
+  border: 2px solid #ffd700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+.role-card h4 {
+  margin: 0.5rem 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.role-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.raid-matcher-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.raid-matcher-actions button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid;
+}
+
+.cancel-btn {
+  background: rgba(100, 100, 100, 0.2);
+  border-color: #666;
+  color: #aaa;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: rgba(100, 100, 100, 0.3);
+  color: #fff;
+}
+
+.join-btn {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.join-btn:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.join-btn:disabled,
+.cancel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .raid-matcher-modal {
+    padding: 1.5rem;
+  }
+
+  .role-selection {
+    grid-template-columns: 1fr;
+  }
+
+  .raid-matcher-actions {
+    flex-direction: column;
+  }
+
+  .raid-matcher-actions button {
+    width: 100%;
+  }
+}

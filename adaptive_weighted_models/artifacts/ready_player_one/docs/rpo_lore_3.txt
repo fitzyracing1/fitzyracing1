@@ -1,0 +1,1 @@
+Adaptive weighting is useful in dynamic game modes: scouting and positioning can outweigh raw speed during puzzle phases, while speed dominates during chase phases.

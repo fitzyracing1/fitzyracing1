@@ -1,0 +1,22 @@
+# Clean old build/dist folders
+Write-Host "Cleaning old build artifacts..."
+Remove-Item -Recurse -Force build, dist -ErrorAction SilentlyContinue
+
+# Build using python -m PyInstaller so PATH issues don't matter
+Write-Host "Building War of the Worlds Command Console..."
+python -m PyInstaller main.py `
+    --noconsole `
+    --onefile `
+    --name "WarOfTheWorldsConsole" `
+    --icon=assets/icon_green.ico `
+    --add-data "episodes;episodes" `
+    --add-data "assets;assets"
+
+# Check if build succeeded
+if (Test-Path "dist\WarOfTheWorldsConsole.exe") {
+    Write-Host "✅ Build complete!"
+    # Open the dist folder in File Explorer
+    Start-Process explorer.exe "dist"
+} else {
+    Write-Host "❌ Build failed. Check PyInstaller output above."
+}

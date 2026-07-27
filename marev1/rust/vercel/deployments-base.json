@@ -1,0 +1,11 @@
+{
+  "network": "base",
+  "chainId": 8453,
+  "marevToken": "0x774f66ca57c8510573E0B7cb3d227881ef5Fe31D",
+  "dex": "0x96b3e11bD0Af3D985f2A23a092D66821EB5Ba039",
+  "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "deployer": "0x4253AaCA78419dd5d82A74708c29c6Bdfe325565",
+  "deploymentTime": "2026-02-09T21:34:24.608Z",
+  "isTestnet": false,
+  "note": "Base mainnet deployment"
+}

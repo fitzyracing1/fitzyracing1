@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PathKeeper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PathKeeper</h1>
+    
+    <div class="input-section">
+      <input type="text" id="pathInput" placeholder="Enter or paste a file path..." />
+      <button id="addPath">Add Path</button>
+    </div>
+
+    <div class="path-list">
+      <h2>Saved Paths</h2>
+      <div id="pathsList"></div>
+    </div>
+
+    <div class="actions">
+      <button id="clearAll">Clear All</button>
+    </div>
+  </div>
+  
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+import os
+from pathlib import Path
+
+class ApogeeManager:
+    def __init__(self, base_dir: str):
+        self.base_dir = Path(base_dir)
+        self.ensure_structure()
+
+    def ensure_structure(self):
+        folders = ["src", "scripts", "data/raw", "data/processed", "logs", "tests"]
+        for folder in folders:
+            path = self.base_dir / folder
+            path.mkdir(parents=True, exist_ok=True)
+
+    def change_to_base(self):
+        os.chdir(self.base_dir)

@@ -1,0 +1,10 @@
+{
+  "project": "workflow_automation_suite",
+  "archive": "workflow_automation_suite.zip",
+  "includes": [
+    "solution_app",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

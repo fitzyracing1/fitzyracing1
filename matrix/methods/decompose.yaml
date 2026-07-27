@@ -1,0 +1,10 @@
+node: method.core
+id: decompose
+signature: (problem_space, analysis_space) -> problem_space
+preconditions:
+  - analysis_space.has(:analysis_for_root)
+postconditions:
+  - problem_space.has(:subproblems_for_root)
+traps:
+  - non_decomposable
+transform_ref: impl.decompose

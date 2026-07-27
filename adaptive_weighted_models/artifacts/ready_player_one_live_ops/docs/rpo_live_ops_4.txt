@@ -1,0 +1,1 @@
+When IOI pressure spikes, risk weighting should tighten and retraining cadence should increase to prevent stale policy drift.

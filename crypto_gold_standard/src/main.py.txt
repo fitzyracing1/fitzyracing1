@@ -1,0 +1,10 @@
+from apogee_manager import ApogeeManager
+from codex_logger import CodexLogger
+
+if __name__ == "__main__":
+    base_path = r"C:\crypto_gold_standard"
+    apogee = ApogeeManager(base_path)
+    apogee.change_to_base()
+
+    logger = CodexLogger(log_dir="logs")
+    logger.log_event("Crypto Gold Standard project initialized")

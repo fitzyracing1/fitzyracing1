@@ -1,0 +1,374 @@
+.raid-battle-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 950;
+}
+
+.raid-battle-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.battle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.battle-header h2 {
+  margin: 0;
+  color: #ffd700;
+  font-size: 2rem;
+}
+
+.leave-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 50, 50, 0.2);
+  border: 1px solid #ff3232;
+  color: #ff6b6b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.leave-btn:hover {
+  background: rgba(255, 50, 50, 0.3);
+  box-shadow: 0 0 10px rgba(255, 50, 50, 0.4);
+}
+
+.battle-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.enemy-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enemy-card {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 50, 50, 0.2), rgba(139, 0, 0, 0.2));
+  border: 2px solid #ff3232;
+  border-radius: 12px;
+  min-width: 250px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 50, 50, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 50, 50, 0.6);
+  }
+}
+
+.enemy-card h3 {
+  margin: 0 0 1rem;
+  color: #ff6b6b;
+  font-size: 1.5rem;
+}
+
+.hp-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.hp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff64, #00ffff);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.hp-text {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.party-section {
+  padding: 1rem;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.party-section h3 {
+  margin-top: 0;
+  color: #00ffff;
+  font-size: 1.1rem;
+}
+
+.party-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.party-member {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.party-member:nth-child(1) {
+  border-left-color: #1e90ff;
+}
+
+.party-member:nth-child(2) {
+  border-left-color: #ff1744;
+}
+
+.party-member:nth-child(3) {
+  border-left-color: #00ff64;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.member-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.member-role {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.role-tank {
+  color: #1e90ff;
+}
+
+.role-dps {
+  color: #ff1744;
+}
+
+.role-healer {
+  color: #00ff64;
+}
+
+.member-hp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hp-bar.small {
+  width: 80px;
+  height: 8px;
+}
+
+.hp-text {
+  font-size: 0.8rem;
+  min-width: 40px;
+  text-align: right;
+}
+
+.battle-log-section {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.battle-log-section h3 {
+  margin-top: 0;
+  color: #7cf6ff;
+  font-size: 0.95rem;
+}
+
+.battle-log {
+  height: 80px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  color: #b9c7de;
+  font-family: 'Courier New', monospace;
+}
+
+.battle-log p {
+  margin: 0.25rem 0;
+  padding: 0.25rem;
+}
+
+.battle-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.action-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 120px;
+}
+
+.action-btn.attack {
+  background: rgba(255, 50, 50, 0.2);
+  color: #ff6b6b;
+  border: 1px solid #ff3232;
+}
+
+.action-btn.attack:hover {
+  background: rgba(255, 50, 50, 0.3);
+  box-shadow: 0 0 15px rgba(255, 50, 50, 0.4);
+}
+
+.action-btn.defend {
+  background: rgba(30, 144, 255, 0.2);
+  color: #4a9eff;
+  border: 1px solid #1e90ff;
+}
+
+.action-btn.defend:hover {
+  background: rgba(30, 144, 255, 0.3);
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+}
+
+.action-btn.heal {
+  background: rgba(0, 255, 100, 0.2);
+  color: #00ff64;
+  border: 1px solid #00ff64;
+}
+
+.action-btn.heal:hover {
+  background: rgba(0, 255, 100, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.4);
+}
+
+.victory-screen,
+.defeat-screen {
+  background: rgba(0, 20, 40, 0.95);
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+.victory-screen {
+  border-color: #00ff64;
+  box-shadow: 0 0 40px rgba(0, 255, 100, 0.3);
+}
+
+.victory-screen h2 {
+  color: #00ff64;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.defeat-screen {
+  border-color: #ff3232;
+  box-shadow: 0 0 40px rgba(255, 50, 50, 0.3);
+}
+
+.defeat-screen h2 {
+  color: #ff6b6b;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.victory-rewards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.reward {
+  padding: 1rem;
+  background: rgba(0, 255, 100, 0.1);
+  border: 1px solid rgba(0, 255, 100, 0.3);
+  border-radius: 8px;
+}
+
+.reward span {
+  display: block;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.reward strong {
+  display: block;
+  color: #00ff64;
+  font-size: 1.5rem;
+}
+
+.victory-btn,
+.continue-btn {
+  padding: 1rem 2rem;
+  background: rgba(0, 255, 100, 0.2);
+  border: 1px solid #00ff64;
+  color: #00ff64;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.victory-btn:hover,
+.continue-btn:hover {
+  background: rgba(0, 255, 100, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+}
+
+@media (max-width: 900px) {
+  .battle-area {
+    grid-template-columns: 1fr;
+  }
+
+  .battle-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}

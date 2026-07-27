@@ -1,0 +1,47 @@
+node: method.core
+id: loop_alpha
+signature: problem_space -> execution_space
+preconditions:
+  - problem_space.has(:root_problem)
+postconditions:
+  - execution_space.state in [success, failure, needs_refinement]
+traps:
+  - no_applicable_methods
+  - inconsistent_subproblems
+transform_ref: impl.loop_alpha
+
+impl:
+  id: impl.loop_alpha
+  steps:
+    - name: ingest
+      do:
+        - read :root_problem from problem_space
+        - normalize into internal representation P
+
+    - name: analyze
+      do:
+        - call method:analyze on P
+        - result: analysis A (structure, constraints, hints)
+
+    - name: decompose
+      do:
+        - call method:decompose on (P, A)
+        - result: subproblems S = [s1, s2, ..., sn]
+
+    - name: plan
+      do:
+        - for each si in S, call method:select_method on (si, available_methods)
+        - produce plan entry (si, mi)
+        - aggregate into plan PI
+
+    - name: execute
+      do:
+        - for each (si, mi) in PI, call method:apply_method on (si, mi)
+        - collect results R = [r1, r2, ..., rn]
+
+    - name: verify
+      do:
+        - call method:verify on (P, R)
+        - on success, write state=success, result=R into execution_space
+        - on needs_refinement, construct P' from (P, R, diagnostics); write :root_problem = P' into problem_space; write state=needs_refinement into execution_space
+        - on failure, write state=failure, diagnostics into execution_space

@@ -1,0 +1,10 @@
+node: method.core
+id: verify
+signature: (problem_space, execution_space) -> execution_space
+preconditions:
+  - execution_space.has(:partial_results)
+postconditions:
+  - execution_space.state in [success, failure, needs_refinement]
+traps:
+  - inconsistent_results
+transform_ref: impl.verify

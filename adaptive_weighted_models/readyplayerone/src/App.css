@@ -1,0 +1,171 @@
+.shell {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top, rgba(37, 198, 218, 0.22), transparent 28%),
+    linear-gradient(180deg, #0d1324 0%, #080c18 52%, #04070f 100%);
+  color: #ecf3ff;
+}
+
+.hero-panel,
+.panel {
+  border: 1px solid rgba(121, 185, 255, 0.18);
+  background: rgba(10, 18, 36, 0.82);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+}
+
+.hero-panel {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 28px;
+  margin-bottom: 24px;
+}
+
+.hero-panel h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.lede {
+  margin: 0;
+  max-width: 62ch;
+  color: #b9c7de;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: #7cf6ff;
+}
+
+.status-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.status-grid article,
+.signal-card,
+.faction-card {
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.status-grid article {
+  border: 1px solid rgba(124, 246, 255, 0.16);
+  background: rgba(10, 27, 44, 0.84);
+}
+
+.status-grid span,
+.signal-card span {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8fa2c6;
+}
+
+.status-grid strong,
+.signal-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.panel.wide {
+  grid-column: span 2;
+}
+
+.faction-grid,
+.signal-row {
+  display: grid;
+  gap: 14px;
+}
+
+.faction-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.faction-card {
+  min-height: 140px;
+  border: 1px solid transparent;
+}
+
+.faction-card.gold {
+  background: linear-gradient(180deg, rgba(255, 203, 93, 0.12), rgba(255, 203, 93, 0.03));
+  border-color: rgba(255, 203, 93, 0.26);
+}
+
+.faction-card.cyan {
+  background: linear-gradient(180deg, rgba(77, 220, 255, 0.12), rgba(77, 220, 255, 0.03));
+  border-color: rgba(77, 220, 255, 0.26);
+}
+
+.faction-card.crimson {
+  background: linear-gradient(180deg, rgba(255, 104, 129, 0.12), rgba(255, 104, 129, 0.03));
+  border-color: rgba(255, 104, 129, 0.26);
+}
+
+.faction-card h3,
+.panel h2 {
+  margin: 0 0 10px;
+}
+
+.faction-card p,
+.panel p,
+.quest-list li {
+  color: #b9c7de;
+}
+
+.quest-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.signal-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.signal-card {
+  border: 1px solid rgba(176, 197, 255, 0.14);
+  background: rgba(12, 22, 46, 0.76);
+}
+
+.mono-line {
+  font-family: 'Consolas', 'SFMono-Regular', monospace;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    padding: 16px;
+  }
+
+  .hero-panel,
+  .panel-grid,
+  .faction-grid,
+  .signal-row {
+    grid-template-columns: 1fr;
+  }
+
+  .panel.wide {
+    grid-column: span 1;
+  }
+}

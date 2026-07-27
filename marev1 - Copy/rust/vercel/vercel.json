@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "public": true,
+  "routes": [
+    { "src": "/factory$", "dest": "/factory.html" },
+    { "src": "/factory\\.htm$", "dest": "/factory.html" },
+    { "src": "/dex$", "dest": "/dex.html" },
+    { "src": "/attention$", "dest": "/attention.html" },
+    { "src": "/ai$", "dest": "/ai.html" },
+    { "src": "/cli$", "dest": "/cli.html" },
+    { "src": "/(?!.*\\.(js|css|json|html)$)", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

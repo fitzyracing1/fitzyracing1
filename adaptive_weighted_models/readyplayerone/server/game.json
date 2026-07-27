@@ -1,0 +1,156 @@
+{
+  "players": {
+    "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0": {
+      "id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+      "username": "Joshua",
+      "faction": "Gunters",
+      "level": 1,
+      "experience": 0,
+      "score": 0,
+      "created_at": "2026-04-28T22:44:10.558Z",
+      "updated_at": "2026-04-28T22:44:10.558Z"
+    },
+    "01c11eb2-a7d6-43c4-bdf7-9debaf21b6b1": {
+      "id": "01c11eb2-a7d6-43c4-bdf7-9debaf21b6b1",
+      "username": "Martin",
+      "faction": "Rebels",
+      "level": 1,
+      "experience": 0,
+      "score": 0,
+      "created_at": "2026-04-28T22:53:06.549Z",
+      "updated_at": "2026-04-28T22:53:06.549Z"
+    },
+    "6fad8a62-b3d5-4b11-8cac-88e28b245dee": {
+      "id": "6fad8a62-b3d5-4b11-8cac-88e28b245dee",
+      "username": "Parzival",
+      "faction": "Gunters",
+      "level": 1,
+      "experience": 0,
+      "score": 0,
+      "created_at": "2026-04-28T22:54:27.596Z",
+      "updated_at": "2026-04-28T22:54:27.596Z"
+    }
+  },
+  "quests": {},
+  "raids": {
+    "raid_1777416259953_vfq4k": {
+      "id": "raid_1777416259953_vfq4k",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:44:19.953Z",
+      "roster": [
+        {
+          "id": "roster_1777416259960_5e1em",
+          "raid_session_id": "raid_1777416259953_vfq4k",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "dps",
+          "contribution_score": 0
+        }
+      ]
+    },
+    "raid_1777416266074_xsfs4l": {
+      "id": "raid_1777416266074_xsfs4l",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:44:26.074Z",
+      "roster": [
+        {
+          "id": "roster_1777416266080_2bzen",
+          "raid_session_id": "raid_1777416266074_xsfs4l",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "dps",
+          "contribution_score": 0
+        }
+      ]
+    },
+    "raid_1777416375444_ibkpva": {
+      "id": "raid_1777416375444_ibkpva",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:46:15.444Z",
+      "roster": [
+        {
+          "id": "roster_1777416375451_1tckkc",
+          "raid_session_id": "raid_1777416375444_ibkpva",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "tank",
+          "contribution_score": 0
+        }
+      ]
+    },
+    "raid_1777416380212_3o17dg": {
+      "id": "raid_1777416380212_3o17dg",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:46:20.212Z",
+      "roster": [
+        {
+          "id": "roster_1777416380217_o95yoc",
+          "raid_session_id": "raid_1777416380212_3o17dg",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "healer",
+          "contribution_score": 0
+        }
+      ]
+    },
+    "raid_1777416389754_b83ogk": {
+      "id": "raid_1777416389754_b83ogk",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:46:29.754Z",
+      "roster": [
+        {
+          "id": "roster_1777416389762_hsp5fn",
+          "raid_session_id": "raid_1777416389754_b83ogk",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "dps",
+          "contribution_score": 0
+        }
+      ]
+    },
+    "raid_1777416415121_gumrj8": {
+      "id": "raid_1777416415121_gumrj8",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:46:55.121Z",
+      "roster": [
+        {
+          "id": "roster_1777416415133_ijc2ke",
+          "raid_session_id": "raid_1777416415121_gumrj8",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "tank",
+          "contribution_score": 0
+        }
+      ]
+    },
+    "raid_1777416508338_nqmaf4": {
+      "id": "raid_1777416508338_nqmaf4",
+      "raid_id": "anorak",
+      "difficulty": "normal",
+      "status": "forming",
+      "reward_xp": 500,
+      "created_at": "2026-04-28T22:48:28.338Z",
+      "roster": [
+        {
+          "id": "roster_1777416508344_u7hzj",
+          "raid_session_id": "raid_1777416508338_nqmaf4",
+          "player_id": "8fc0170a-4648-4a74-ba17-c3ab3e94e0b0",
+          "role": "tank",
+          "contribution_score": 0
+        }
+      ]
+    }
+  }
+}

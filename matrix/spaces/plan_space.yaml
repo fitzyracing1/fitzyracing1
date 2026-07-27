@@ -1,0 +1,8 @@
+node: space.core
+id: plan_space
+coordinates: symbolic.sequence
+allowed_methods:
+  - select_method
+  - schedule
+boundaries: []
+rules: []

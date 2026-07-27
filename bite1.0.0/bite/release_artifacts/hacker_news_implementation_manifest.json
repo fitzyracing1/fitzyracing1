@@ -1,0 +1,10 @@
+{
+  "project": "hacker_news_implementation",
+  "archive": "hacker_news_implementation.zip",
+  "includes": [
+    "mission_planner",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

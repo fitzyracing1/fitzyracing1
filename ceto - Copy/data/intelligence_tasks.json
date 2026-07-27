@@ -1,0 +1,135 @@
+[
+  {
+    "task_id": "intel_0",
+    "source_cycle": 2,
+    "items_found": 60,
+    "timestamp": "2026-01-01T20:27:41.906665",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_1",
+    "source_cycle": 3,
+    "items_found": 27,
+    "timestamp": "2026-01-01T20:27:42.007073",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_2",
+    "source_cycle": 4,
+    "items_found": 68,
+    "timestamp": "2026-01-01T20:27:42.107254",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_3",
+    "source_cycle": 5,
+    "items_found": 82,
+    "timestamp": "2026-01-01T20:27:42.207531",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_4",
+    "source_cycle": 6,
+    "items_found": 33,
+    "timestamp": "2026-01-01T20:27:42.308116",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_5",
+    "source_cycle": 7,
+    "items_found": 36,
+    "timestamp": "2026-01-01T20:27:42.408411",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_6",
+    "source_cycle": 8,
+    "items_found": 26,
+    "timestamp": "2026-01-01T20:27:42.509079",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_7",
+    "source_cycle": 9,
+    "items_found": 53,
+    "timestamp": "2026-01-01T20:27:42.609573",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_8",
+    "source_cycle": 10,
+    "items_found": 99,
+    "timestamp": "2026-01-01T20:27:42.709888",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_9",
+    "source_cycle": 11,
+    "items_found": 72,
+    "timestamp": "2026-01-01T20:27:42.810366",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_10",
+    "source_cycle": 12,
+    "items_found": 10,
+    "timestamp": "2026-01-01T20:27:42.910549",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_11",
+    "source_cycle": 13,
+    "items_found": 79,
+    "timestamp": "2026-01-01T20:27:43.011109",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_12",
+    "source_cycle": 14,
+    "items_found": 64,
+    "timestamp": "2026-01-01T20:27:43.111289",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_13",
+    "source_cycle": 15,
+    "items_found": 60,
+    "timestamp": "2026-01-01T20:27:43.211544",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_14",
+    "source_cycle": 16,
+    "items_found": 7,
+    "timestamp": "2026-01-01T20:27:43.311807",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_15",
+    "source_cycle": 17,
+    "items_found": 100,
+    "timestamp": "2026-01-01T20:27:43.412017",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_16",
+    "source_cycle": 18,
+    "items_found": 26,
+    "timestamp": "2026-01-01T20:27:43.512080",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_17",
+    "source_cycle": 19,
+    "items_found": 74,
+    "timestamp": "2026-01-01T20:27:43.612616",
+    "status": "pending_intelligence"
+  },
+  {
+    "task_id": "intel_18",
+    "source_cycle": 20,
+    "items_found": 7,
+    "timestamp": "2026-01-01T20:27:43.712935",
+    "status": "pending_intelligence"
+  }
+]

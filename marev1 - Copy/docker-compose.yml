@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  marev1:
+    build: .
+    container_name: marev1-blockchain
+    ports:
+      - "8080:8080"
+    environment:
+      - RUST_LOG=info
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

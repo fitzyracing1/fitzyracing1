@@ -1,0 +1,10 @@
+{
+  "project": "trending_repositories_on_github_today_github_implementation",
+  "archive": "trending_repositories_on_github_today_github_implementation.zip",
+  "includes": [
+    "mission_planner",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

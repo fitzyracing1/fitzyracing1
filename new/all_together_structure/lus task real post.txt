@@ -1,0 +1,17 @@
+lus task real post
+link the the post
+turn into the draft 
+replace vecots
+import time 
+linmk the intro with post
+import numpy
+main (send all int)
+import sqlite3
+
+conn = sqlite3.connect('database.db')
+cursor = conn.cursor()
+cursor.execute('''CREATE TABLE IF NOT EXISTS posts
+                  (id INTEGER PRIMARY KEY, title TEXT, content TEXT, status TEXT)''')
+conn.commit()
+
+"this is the supported topic so the compute is engageing with the topic load the pass and ffrequent the turn so when one oobject is reached this is the ability for the compute to take the shiorttest path and real time play in the following shortest path 

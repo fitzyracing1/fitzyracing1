@@ -1,0 +1,1 @@
+When quality telemetry drops, use fallback context and conservative scoring. Retraining should trigger if recent prediction error rises against baseline.

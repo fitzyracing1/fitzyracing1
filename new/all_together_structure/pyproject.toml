@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "all-together-structure"
+version = "0.1.0"
+description = "Checkpoint-tree game pathing with selectable shortest-path strategy"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "EC" }]
+license = { text = "MIT" }
+keywords = ["game", "pathfinding", "astar", "checkpoints"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+ats-demo = "all_together_structure.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

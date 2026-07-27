@@ -1,0 +1,148 @@
+{
+  "generated_at": "2025-12-31T19:20:11.394623+00:00",
+  "total_tests": 14,
+  "passed": 14,
+  "failed": 0,
+  "test_results": [
+    {
+      "test_name": "Basic positive difference",
+      "value_a": 10,
+      "value_b": 5,
+      "expected": 5,
+      "actual": 5,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.393982+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Large positive difference",
+      "value_a": 100,
+      "value_b": 50,
+      "expected": 50,
+      "actual": 50,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.393997+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Negative difference",
+      "value_a": 5,
+      "value_b": 10,
+      "expected": -5,
+      "actual": -5,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394002+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Zero difference",
+      "value_a": 0,
+      "value_b": 0,
+      "expected": 0,
+      "actual": 0,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394004+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Negative values",
+      "value_a": -10,
+      "value_b": -5,
+      "expected": -5,
+      "actual": -5,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394006+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Decimal precision",
+      "value_a": 7.5,
+      "value_b": 2.3,
+      "expected": 5.2,
+      "actual": 5.2,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394008+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Large scale difference",
+      "value_a": 1000,
+      "value_b": 250,
+      "expected": 750,
+      "actual": 750,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394010+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Small decimal values",
+      "value_a": 0.1,
+      "value_b": 0.05,
+      "expected": 0.05,
+      "actual": 0.05,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394012+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Mixed sign difference",
+      "value_a": -100,
+      "value_b": 50,
+      "expected": -150,
+      "actual": -150,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394014+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Pi minus e",
+      "value_a": 3.14159,
+      "value_b": 2.71828,
+      "expected": 0.42331,
+      "actual": 0.42330999999999985,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394016+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Positive infinity",
+      "value_a": Infinity,
+      "value_b": 100,
+      "expected": Infinity,
+      "actual": Infinity,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394194+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Subtract infinity",
+      "value_a": 100,
+      "value_b": Infinity,
+      "expected": -Infinity,
+      "actual": -Infinity,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394197+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Very large vs very small",
+      "value_a": 10000000000.0,
+      "value_b": 1e-10,
+      "expected": 10000000000.0,
+      "actual": 10000000000.0,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394199+00:00",
+      "error": null
+    },
+    {
+      "test_name": "Large negative spread",
+      "value_a": -10000000000.0,
+      "value_b": 10000000000.0,
+      "expected": -20000000000.0,
+      "actual": -20000000000.0,
+      "passed": true,
+      "timestamp": "2025-12-31T19:20:11.394201+00:00",
+      "error": null
+    }
+  ]
+}

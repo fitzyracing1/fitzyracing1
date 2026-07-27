@@ -1,0 +1,19 @@
+{
+  "name": "com.virtualoffice.metaquest",
+  "version": "1.0.0",
+  "displayName": "Meta Quest Virtual Office",
+  "description": "A virtual reality office application for Meta Quest where users can collaborate and share files",
+  "unity": "2021.3",
+  "dependencies": {},
+  "keywords": [
+    "VR",
+    "Meta Quest",
+    "Virtual Office",
+    "Multiplayer",
+    "File Sharing"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  }
+}

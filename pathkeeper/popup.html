@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>body{font:13px system-ui;margin:12px;min-width:260px}</style>
+</head>
+<body>
+  <h3>Pathkeeper</h3>
+  <p><b>Save step:</b> Alt+S<br><b>Open paths:</b> Alt+K</p>
+  <div id="list"></div>
+  <script>
+    chrome.tabs.query({active:true,currentWindow:true}, tabs=>{
+      const url = new URL(tabs[0].url||"");
+      const domain = url.hostname;
+      chrome.storage.local.get(["paths"], data=>{
+        const paths=(data.paths||{})[domain]||[];
+        document.getElementById("list").innerHTML =
+          paths.slice().reverse().map(p=>`<div>- ${p.note||p.title}</div>`).join("") ||
+          "No saved paths yet.";
+      });
+    });
+  </script>
+</body>
+</html>

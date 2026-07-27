@@ -1,0 +1,15 @@
+{
+  "CurrentNumber": 200,
+  "IsPrime": false,
+  "Score": 221,
+  "PrimesFound": [
+    17,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43
+  ],
+  "LastUpdated": "2025-11-23T23:59:52.1290615Z"
+}

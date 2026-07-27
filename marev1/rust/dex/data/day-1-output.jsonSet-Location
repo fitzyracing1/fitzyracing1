@@ -1,0 +1,14 @@
+{
+  "day": "1",
+  "root": "0xf2836208eccd0015ef0a2130a1229c697a09a50eb34abc779263ef78a0f50042",
+  "totalScore": "256",
+  "totalAmountWei": "100000000000000000000",
+  "claims": {
+    "0x4253AaCA78419dd5d82A74708c29c6Bdfe325565": {
+      "score": "256",
+      "amountWei": "100000000000000000000",
+      "leaf": "0xf2836208eccd0015ef0a2130a1229c697a09a50eb34abc779263ef78a0f50042",
+      "proof": []
+    }
+  }
+}

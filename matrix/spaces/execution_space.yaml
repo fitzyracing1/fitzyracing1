@@ -1,0 +1,8 @@
+node: space.core
+id: execution_space
+coordinates: state.timeline
+allowed_methods:
+  - apply_method
+  - verify
+boundaries: []
+rules: []

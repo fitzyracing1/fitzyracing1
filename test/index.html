@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Life</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>Computer Life</h1>
+        <p>Digital organisms eat, wander, reproduce, mutate, and fade back into the grid.</p>
+      </div>
+      <div class="status-strip" aria-live="polite">
+        <span><strong id="generation">0</strong> ticks</span>
+        <span><strong id="lifeCount">0</strong> lifeforms</span>
+        <span><strong id="foodCount">0</strong> food</span>
+      </div>
+    </header>
+
+    <section class="layout">
+      <aside class="controls" aria-label="Simulation controls">
+        <div class="button-grid">
+          <button id="playPauseBtn" class="btn btn-primary">Start</button>
+          <button id="stepBtn" class="btn">Step</button>
+          <button id="seedBtn" class="btn">Seed</button>
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+
+        <label for="speedRange">
+          <span>Speed</span>
+          <output id="speedValue">24</output>
+        </label>
+        <input id="speedRange" type="range" min="4" max="60" value="24" />
+
+        <label for="foodRange">
+          <span>Food growth</span>
+          <output id="foodValue">36</output>
+        </label>
+        <input id="foodRange" type="range" min="0" max="80" value="36" />
+
+        <label for="mutationRange">
+          <span>Mutation</span>
+          <output id="mutationValue">8</output>
+        </label>
+        <input id="mutationRange" type="range" min="0" max="30" value="8" />
+
+        <div class="legend" aria-label="Legend">
+          <span><i class="dot life"></i> Organism</span>
+          <span><i class="dot food"></i> Food</span>
+          <span><i class="dot trail"></i> Trail</span>
+        </div>
+      </aside>
+
+      <section class="world-wrap">
+        <canvas id="world" width="960" height="640" aria-label="Artificial life simulation"></canvas>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

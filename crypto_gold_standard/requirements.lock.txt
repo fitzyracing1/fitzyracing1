@@ -1,0 +1,40 @@
+# requirements.lock
+# Generated on 2025-09-12 17:00 EDT
+# Locked dependencies for cryptocurrency project with gold standard
+
+[metadata]
+generator = "manual"
+lockfile-version = "1.0"
+python-version = "3.11"
+
+[package]
+name = "crypto-gold-standard"
+version = "0.1.0"
+
+[dependencies]
+python-bitcoinlib = {version = "0.11.1", source = "pypi"}
+yfinance = {version = "0.2.40", source = "pypi"}
+pandas = {version = "2.2.2", source = "pypi"}
+requests = {version = "2.32.3", source = "pypi"}
+numpy = {version = "1.26.4", source = "pypi"}
+
+[dev-dependencies]
+pytest = {version = "8.2.2", source = "pypi"}
+black = {version = "24.8.0", source = "pypi"}
+
+[dependency-versions]
+python-bitcoinlib = {version = "0.11.1", hash = "sha256:abc123def456..."}  # Placeholder hash
+yfinance = {version = "0.2.40", hash = "sha256:ghi789jkl012..."}  # Placeholder hash
+pandas = {version = "2.2.2", hash = "sha256:mno345pqr678..."}  # Placeholder hash
+requests = {version = "2.32.3", hash = "sha256:stu901vwx234..."}  # Placeholder hash
+numpy = {version = "1.26.4", hash = "sha256:yzc567def890..."}  # Placeholder hash
+pytest = {version = "8.2.2", hash = "sha256:abc901def234..."}  # Placeholder hash
+black = {version = "24.8.0", hash = "sha256:ghi345jkl678..."}  # Placeholder hash
+
+[sub-dependencies]
+python-bitcoinlib[secp256k1] = {version = "0.11.1", source = "pypi"}
+requests[security] = {version = "2.32.3", source = "pypi"}
+
+[sdist]
+# Optional: Include source distributions if needed for reproducibility
+yfinance = {url = "https://files.pythonhosted.org/packages/source/y/yfinance/yfinance-0.2.40.tar.gz", hash = "sha256:ghi789jkl012..."}

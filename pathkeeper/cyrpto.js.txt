@@ -1,0 +1,29 @@
+// Simple AES‑GCM encryption using Web Crypto API
+const enc = new TextEncoder();
+const dec = new TextDecoder();
+
+async function getKey(passphrase) {
+  const keyMaterial = await crypto.subtle.importKey(
+    "raw", enc.encode(passphrase), { name: "PBKDF2" }, false, ["deriveKey"]
+  );
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: enc.encode("pathkeeper"), iterations: 100000, hash: "SHA-256" },
+    keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]
+  );
+}
+
+export async function encryptData(passphrase, data) {
+  const key = await getKey(passphrase);
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const encoded = enc.encode(JSON.stringify(data));
+  const ciphertext = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encoded);
+  return { iv: Array.from(iv), ct: Array.from(new Uint8Array(ciphertext)) };
+}
+
+export async function decryptData(passphrase, payload) {
+  const key = await getKey(passphrase);
+  const iv = new Uint8Array(payload.iv);
+  const ct = new Uint8Array(payload.ct);
+  const plaintext = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ct);
+  return JSON.parse(dec.decode(plaintext));
+}

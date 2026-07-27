@@ -1,0 +1,248 @@
+.leaderboard-container {
+  padding: 2rem;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.leaderboard-header h2 {
+  margin: 0;
+  color: #ffd700;
+  font-size: 2rem;
+}
+
+.back-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.faction-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-btn.active {
+  border-color: #00ffff;
+  color: #00ffff;
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.filter-btn.gunters.active {
+  border-color: #ffd700;
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.filter-btn.rebels.active {
+  border-color: #00ffff;
+  color: #00ffff;
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.filter-btn.sixers.active {
+  border-color: #ff1744;
+  color: #ff1744;
+  background: rgba(255, 23, 68, 0.2);
+  box-shadow: 0 0 10px rgba(255, 23, 68, 0.3);
+}
+
+.loading,
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+.leaderboard-table {
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 150px 100px 150px;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+  font-weight: 700;
+  color: #7cf6ff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: sticky;
+  top: 0;
+}
+
+.table-body {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 150px 100px 150px;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.table-row:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.table-row.rank-1 {
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.table-row.rank-2 {
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.table-row.rank-3 {
+  background: rgba(205, 127, 50, 0.1);
+}
+
+.rank {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.name {
+  color: #fff;
+  font-weight: 600;
+}
+
+.faction {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.faction-gunters {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+.faction-rebels {
+  background: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+}
+
+.faction-sixers {
+  background: rgba(255, 23, 68, 0.2);
+  color: #ff1744;
+}
+
+.level {
+  text-align: center;
+  color: #7cf6ff;
+  font-weight: 600;
+}
+
+.score {
+  text-align: right;
+  color: #00ff64;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .leaderboard-container {
+    padding: 1rem;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 50px 1fr 80px 60px;
+  }
+
+  .leaderboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .faction {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .leaderboard-container {
+    padding: 0.5rem;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 40px 1fr 80px;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .table-header .level,
+  .table-row .level {
+    display: none;
+  }
+
+  .faction {
+    font-size: 0.7rem;
+  }
+
+  .faction-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,68 @@
+[2026-06-16T22:16:37] preflight ok (extension poll 1.7s ago)
+[2026-06-16T22:16:37] robot starting; total_turns=0 subject_index=0
+[2026-06-16T22:16:37] subject [0] 'Diversity regularizers for small mixture-of-experts ensembles (5-10 experts)' starting
+[2026-06-16T22:17:10] turn 1 ok (1970 chars) next=If you penalize cosine similarity between expert weight vectors during
+[2026-06-16T22:18:09] turn 2 ok (2166 chars) next=If you replace weight-space diversity penalties with output-space dive
+[2026-06-16T22:19:09] turn 3 ok (2240 chars) next=Since both weight-space and output-space diversity penalties depend on
+[2026-06-16T22:20:08] turn 4 ok (2273 chars) next=When you hard-cap expert capacity to prevent the rich-get-richer colla
+[2026-06-16T22:21:07] turn 5 ok (2185 chars) next=Expert Choice routing gives agency to experts rather than tokens — but
+[2026-06-16T22:22:06] turn 6 ok (2458 chars) next=If counterfactual ablation at inference is the honest diagnostic for e
+[2026-06-16T22:23:09] turn 7 ok (2955 chars) next=Given that redundancy penalties can drive experts into low-data niches
+[2026-06-16T22:24:08] turn 8 ok (3093 chars) next=<none>
+[2026-06-16T22:25:31] synthesis written: Diversity_regularizers_for_small_mixture-of-experts_ensembles_5-10_experts.md (163 chars)
+[2026-06-16T22:26:01] subject [1] 'Calibration of softmax outputs and how to measure expected calibration error' starting
+[2026-06-16T22:27:56] turn 10 short/empty response (0 chars); skipping
+[2026-06-16T22:27:56] turn 10 ok (0 chars) next=<none>
+[2026-06-16T22:28:56] turn 11 ok (1901 chars) next=When temperature scaling is applied, why does calibration on in-distri
+[2026-06-16T22:29:57] turn 12 ok (2265 chars) next=Since logit norm is a strong OOD signal, what breaks down when you try
+[2026-06-16T22:32:18] turn 13 short/empty response (0 chars); skipping
+[2026-06-16T22:32:18] turn 13 ok (0 chars) next=<none>
+[2026-06-16T22:34:40] turn 14 short/empty response (0 chars); skipping
+[2026-06-16T22:34:40] turn 14 ok (0 chars) next=<none>
+[2026-06-16T22:36:00] turn 15 ok (1941 chars) next=Since label smoothing distorts the penultimate-layer cluster geometry,
+[2026-06-16T22:37:00] turn 16 ok (2669 chars) next=If neural collapse to an ETF simultaneously maximizes discriminability
+Traceback (most recent call last):
+  File "C:\Users\EC\robot\agent.py", line 407, in main
+    run_subject(token, cfg, state, subject)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EC\robot\agent.py", line 312, in run_subject
+    log(f"turn {turn_id} ok ({len(response)} chars) next={(next_q or '<none>')[:70]}")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EC\robot\agent.py", line 69, in log
+    print(line, flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03c4' in position 88: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\EC\robot\agent.py", line 423, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\EC\robot\agent.py", line 409, in main
+    log(f"ERROR in subject '{subject}': {e!r}; backoff {cfg['error_backoff_seconds']}s")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EC\robot\agent.py", line 69, in log
+    print(line, flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03c4' in position 238: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\EC\robot\agent.py", line 427, in <module>
+    log(f"FATAL: {e!r}")
+    ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\EC\robot\agent.py", line 69, in log
+    print(line, flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03c4' in position 303: character maps to <undefined>

@@ -1,0 +1,32 @@
+MATRIX:
+  version: 0.1
+  description: Execution substrate for artifact-based reasoning
+
+NODE_TYPES:
+
+  identity.core:
+    kind: identity
+    fields:
+      - name
+      - version
+      - invariants
+      - dependencies
+
+  method.core:
+    kind: method
+    fields:
+      - id
+      - signature        # (input_space -> output_space)
+      - preconditions    # predicates on input
+      - postconditions   # predicates on output
+      - traps            # failure modes
+      - transform_ref    # pointer to implementation artifact
+
+  space.core:
+    kind: space
+    fields:
+      - id
+      - coordinates      # symbolic or numeric
+      - allowed_methods  # method ids
+      - boundaries       # constraints
+      - rules            # local logic

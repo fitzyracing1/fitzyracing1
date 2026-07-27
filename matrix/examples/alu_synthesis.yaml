@@ -1,0 +1,74 @@
+example: alu_synthesis
+loop: loop_alpha
+root_problem: |
+  Given a symbolic ALU spec and a set of test vectors, derive a minimal
+  artifact graph that implements the ALU.
+
+trace:
+  - step: ingest
+    state:
+      problem_space:
+        root_problem: P0
+
+  - step: analyze
+    call: analyze(P0)
+    result:
+      analysis: A0
+      fields:
+        type: synthesis
+        inputs: [ALU_spec, test_vectors]
+        outputs: [artifact_graph]
+        constraints: [minimality, correctness]
+
+  - step: decompose
+    call: decompose(P0, A0)
+    result:
+      subproblems:
+        - s_parse_spec
+        - s_model_behavior
+        - s_generate_graph
+        - s_check_tests
+
+  - step: plan
+    selections:
+      s_parse_spec: parse_ALU_DSL
+      s_model_behavior: build_symbolic_model
+      s_generate_graph: graph_synthesis
+      s_check_tests: simulate_and_compare
+    result:
+      plan_PI:
+        - [s_parse_spec, parse_ALU_DSL]
+        - [s_model_behavior, build_symbolic_model]
+        - [s_generate_graph, graph_synthesis]
+        - [s_check_tests, simulate_and_compare]
+
+  - step: execute
+    results:
+      - r_parse
+      - r_model
+      - r_graph
+      - r_check
+
+  - step: verify
+    branches:
+      success:
+        when: all tests pass AND graph is minimal
+        write:
+          execution_space.state: success
+          execution_space.result: R
+      needs_refinement:
+        when: tests fail but graph is close
+        construct:
+          P1: repair graph given failing cases
+        write:
+          problem_space.root_problem: P1
+          execution_space.state: needs_refinement
+      failure:
+        when: results inconsistent
+        write:
+          execution_space.state: failure
+          execution_space.diagnostics: <diagnostics>
+
+  - step: self_loop
+    when: execution_space.state == needs_refinement
+    do: re-enter loop_alpha on problem_space[:root_problem] = P1

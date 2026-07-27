@@ -1,0 +1,10 @@
+node: method.core
+id: apply_method
+signature: (problem_space, method.core) -> execution_space
+preconditions:
+  - method.core is applicable_to(problem)
+postconditions:
+  - execution_space.has(:partial_result)
+traps:
+  - runtime_error
+transform_ref: impl.apply_method

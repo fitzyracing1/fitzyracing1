@@ -1,0 +1,116 @@
+[
+  {
+    "cycle": 2,
+    "timestamp": "2026-01-01T20:27:41.906665",
+    "status": "crawled",
+    "items_found": 60
+  },
+  {
+    "cycle": 3,
+    "timestamp": "2026-01-01T20:27:42.007073",
+    "status": "crawled",
+    "items_found": 27
+  },
+  {
+    "cycle": 4,
+    "timestamp": "2026-01-01T20:27:42.107254",
+    "status": "crawled",
+    "items_found": 68
+  },
+  {
+    "cycle": 5,
+    "timestamp": "2026-01-01T20:27:42.207531",
+    "status": "crawled",
+    "items_found": 82
+  },
+  {
+    "cycle": 6,
+    "timestamp": "2026-01-01T20:27:42.308116",
+    "status": "crawled",
+    "items_found": 33
+  },
+  {
+    "cycle": 7,
+    "timestamp": "2026-01-01T20:27:42.408411",
+    "status": "crawled",
+    "items_found": 36
+  },
+  {
+    "cycle": 8,
+    "timestamp": "2026-01-01T20:27:42.509079",
+    "status": "crawled",
+    "items_found": 26
+  },
+  {
+    "cycle": 9,
+    "timestamp": "2026-01-01T20:27:42.609573",
+    "status": "crawled",
+    "items_found": 53
+  },
+  {
+    "cycle": 10,
+    "timestamp": "2026-01-01T20:27:42.709888",
+    "status": "crawled",
+    "items_found": 99
+  },
+  {
+    "cycle": 11,
+    "timestamp": "2026-01-01T20:27:42.810366",
+    "status": "crawled",
+    "items_found": 72
+  },
+  {
+    "cycle": 12,
+    "timestamp": "2026-01-01T20:27:42.910549",
+    "status": "crawled",
+    "items_found": 10
+  },
+  {
+    "cycle": 13,
+    "timestamp": "2026-01-01T20:27:43.011109",
+    "status": "crawled",
+    "items_found": 79
+  },
+  {
+    "cycle": 14,
+    "timestamp": "2026-01-01T20:27:43.111289",
+    "status": "crawled",
+    "items_found": 64
+  },
+  {
+    "cycle": 15,
+    "timestamp": "2026-01-01T20:27:43.211544",
+    "status": "crawled",
+    "items_found": 60
+  },
+  {
+    "cycle": 16,
+    "timestamp": "2026-01-01T20:27:43.311807",
+    "status": "crawled",
+    "items_found": 7
+  },
+  {
+    "cycle": 17,
+    "timestamp": "2026-01-01T20:27:43.412017",
+    "status": "crawled",
+    "items_found": 100
+  },
+  {
+    "cycle": 18,
+    "timestamp": "2026-01-01T20:27:43.512080",
+    "status": "crawled",
+    "items_found": 26
+  },
+  {
+    "cycle": 19,
+    "timestamp": "2026-01-01T20:27:43.612616",
+    "status": "crawled",
+    "items_found": 74
+  },
+  {
+    "cycle": 20,
+    "timestamp": "2026-01-01T20:27:43.712935",
+    "status": "crawled",
+    "items_found": 7
+  }
+]

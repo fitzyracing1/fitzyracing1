@@ -1,0 +1,13 @@
+{
+  "auth_token": "138c03e372fe620c6ed6fb3589dede86",
+  "cadence_seconds": 30,
+  "turns_per_subject": 8,
+  "response_initial_wait_seconds": 20,
+  "max_response_wait_seconds": 90,
+  "stable_text_polls": 3,
+  "poll_interval_seconds": 3,
+  "max_total_turns": 5000,
+  "min_goals_remaining": 3,
+  "extend_goals_by": 5,
+  "error_backoff_seconds": 60
+}

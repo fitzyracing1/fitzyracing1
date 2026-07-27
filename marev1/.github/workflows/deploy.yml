@@ -1,0 +1,58 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+    
+    - name: Build
+      run: cargo build --verbose --release
+    
+    - name: Run tests
+      run: cargo test --lib --verbose
+    
+    - name: Create artifact (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        mkdir -p dist
+        cp target/release/marev1 dist/
+        tar -czf marev1-linux-x86_64.tar.gz dist/
+    
+    - name: Create artifact (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        mkdir dist
+        copy target\release\marev1.exe dist\
+        powershell Compress-Archive -Path dist -DestinationPath marev1-windows-x86_64.zip
+    
+    - name: Create artifact (macOS)
+      if: runner.os == 'macOS'
+      run: |
+        mkdir -p dist
+        cp target/release/marev1 dist/
+        tar -czf marev1-macos-x86_64.tar.gz dist/
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: marev1-${{ runner.os }}
+        path: |
+          marev1-*.tar.gz
+          marev1-*.zip

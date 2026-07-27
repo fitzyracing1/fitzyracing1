@@ -1,0 +1,47 @@
+(function () {
+  const getPathMeta = () => ({
+    url: location.href,
+    title: document.title,
+    h1: (document.querySelector("h1") || {}).innerText || "",
+    ts: Date.now()
+  });
+
+  const KEY_SAVE = e => e.altKey && e.key.toLowerCase() === "s";
+  const KEY_OPEN = e => e.altKey && e.key.toLowerCase() === "k";
+
+  chrome.storage.local.get(["paths"], data => {
+    const paths = data.paths || {};
+    const domain = location.hostname;
+
+    if (paths[domain]) {
+      const banner = document.createElement("div");
+      banner.textContent = "Pathkeeper: Alt+K to open saved paths";
+      Object.assign(banner.style, {
+        position: "fixed", bottom: "16px", right: "16px",
+        background: "#111", color: "#fff", padding: "8px 12px",
+        borderRadius: "8px", font: "14px system-ui", zIndex: 999999
+      });
+      document.body.appendChild(banner);
+      setTimeout(() => banner.remove(), 3000);
+    }
+
+    document.addEventListener("keydown", e => {
+      if (KEY_SAVE(e)) {
+        const note = prompt("Label this step:");
+        if (!note) return;
+        const entry = { ...getPathMeta(), note };
+        const list = paths[domain] || [];
+        list.push(entry);
+        paths[domain] = list.slice(-50);
+        chrome.storage.local.set({ paths }, () => alert("Step saved"));
+      }
+      if (KEY_OPEN(e)) {
+        const list = paths[domain] || [];
+        if (!list.length) return alert("No saved paths here yet.");
+        const menu = list.map((p, i) => `${i + 1}. ${p.note || p.title}`).join("\n");
+        const idx = parseInt(prompt("Open which path?\n" + menu)) - 1;
+        if (idx >= 0 && idx < list.length) location.href = list[idx].url;
+      }
+    });
+  });
+})();

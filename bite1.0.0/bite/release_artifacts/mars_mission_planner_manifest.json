@@ -1,0 +1,10 @@
+{
+  "project": "mars_mission_planner",
+  "archive": "mars_mission_planner.zip",
+  "includes": [
+    "mission_planner",
+    "tests",
+    "README.md",
+    "pyproject.toml"
+  ]
+}

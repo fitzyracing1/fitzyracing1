@@ -1,0 +1,559 @@
+Diversity regularizers for small mixture-of-experts ensembles (5-10 experts)
+Calibration of softmax outputs and how to measure expected calibration error
+Distillation from large to small models: which signals transfer best
+RAG retrieval ranking: BM25 vs dense vs hybrid trade-offs in 2025
+Loss landscape geometry as a predictor of generalization
+Inductive biases in small transformers vs convnets at sub-1B scale
+Low-resource translation strategies for Irish (Gaeilge)
+Base L2 blockchain consensus and finality models
+Mechanistic interpretability: what we actually know about attention heads
+Speculative decoding and self-speculation: when it helps vs hurts latency
+Retrieval-augmented generation failure modes and retrieval quality metrics
+Mixture-of-experts routing collapse and load balancing in sparse models
+Neural architecture search under strict inference-time compute budgets
+Continual learning without catastrophic forgetting in production deployments
+Activation steering and representation engineering as alternatives to RLHF fine-tuning
+Speculative decoding bottlenecks and draft model selection strategies for latency-critical inference
+KV cache compression and eviction policies for long-context transformer serving
+Reward hacking and specification gaming in multi-objective RLHF pipelines
+Mechanistic interpretability of attention head superposition in large-scale transformers
+Data valuation and coreset selection methods for training efficiency under distribution shift
+Activation steering vector geometry and cross-layer interference in sparse autoencoders
+Test-time compute scaling via iterative self-refinement and verification model co-design
+Heterogeneous GPU cluster scheduling under bursty LLM inference workloads
+Tokenizer pathologies and subword fertility as a limiting factor in low-resource multilingual fine-tuning
+Continual learning under concept drift with selective replay and elastic weight consolidation tradeoffs
+Speculative decoding acceptance rate collapse under distribution shift and draft model staleness
+Reward hacking topography in RLHF under underspecified preference models
+KV cache eviction policy design for long-context retrieval-augmented generation latency-memory tradeoffs
+Mechanistic sources of calibration degradation after instruction fine-tuning
+Data mixture law extrapolation failures at domain boundary in multi-epoch pretraining regimes
+Sparse expert routing collapse and load imbalance dynamics in mixture-of-experts transformers under fine-tuning distribution shift
+Gradient interference topology in continual learning across heterogeneous task sequences without replay
+Attention sink formation mechanisms and their downstream effects on positional generalization in extended context windows
+Embedding space fragmentation in retrieval-augmented systems under iterative document index updates
+Thermodynamic efficiency bounds and empirical gap analysis for neural architecture search under compute-constrained regimes
+Reward hacking topologies in RLHF under distribution shift between proxy and ground-truth reward signals
+Latency-accuracy tradeoff surfaces in speculative decoding under adversarial prompt length variance
+Cross-layer feature reuse patterns and their implications for structured pruning in vision-language models
+Causal graph stability under interventional fine-tuning in large language models with chain-of-thought supervision
+Token budget sensitivity and failure mode characterization in tool-augmented agents under multi-step planning horizons
+Gradient routing conflicts in mixture-of-experts models under asymmetric expert load during multi-task fine-tuning
+Embedding space fragmentation in continual learning systems across non-stationary data streams with sparse rehearsal
+Activation steering transferability across model families as a function of representational similarity at intermediate layers
+Fault propagation dynamics in multi-agent LLM pipelines under partial observability and asynchronous tool execution
+Privacy amplification breakdown in federated fine-tuning under heterogeneous client data distributions and adaptive aggregation
+Speculative decoding rejection rates under distribution shift between draft and target models across domain-specialized corpora
+Reward hacking emergence in RLHF pipelines as a function of reward model capacity relative to policy expressivity
+Attention sink formation and its downstream effects on key-value cache compression fidelity in long-context inference
+Latency-accuracy Pareto degradation in cascaded model serving under non-stationary query difficulty distributions
+Cross-layer gradient interference in parameter-efficient fine-tuning methods applied to heavily quantized base models
+Mechanistic causes of loss spike recovery divergence between adaptive and fixed learning rate schedules in large-scale pretraining
+Thermodynamic efficiency bounds on in-context learning as a function of prompt token redundancy and task entropy
+Failure modes of activation steering vectors under compositional instruction following with conflicting latent objectives
+Embedding space fragmentation in continual learning systems as a function of replay buffer curation strategy
+Temporal consistency drift in autoregressive video prediction models under iterative self-conditioning across extended rollouts
+Gradient routing asymmetries in mixture-of-experts models under load-imbalanced token distributions across heterogeneous hardware topologies
+Latent space curvature and geodesic distortion as predictors of out-of-distribution generalization in vision-language contrastive pretraining
+Interference dynamics between concurrent LoRA adapters sharing frozen base weights in multi-tenant fine-tuning serving systems
+Causal attribution instability in chain-of-thought rationales as a function of sampling temperature and decoding strategy divergence
+Positional encoding collapse in ultra-long context transformers under sliding window attention with cross-window gradient isolation
+Activation steering vector drift under iterative self-refinement loops in instruction-tuned models
+Sparse autoencoder feature geometry as a probe for cross-layer concept binding in superposition regimes
+Token budget sensitivity and compute allocation instability in adaptive inference systems under distribution shift
+Reward hacking topology in RLHF pipelines as a function of preference dataset overlap with pretraining corpora
+Embedding space fragmentation in continual learning systems under rehearsal-free elastic weight consolidation
+Mechanistic attribution failures in chain-of-thought faithfulness under adversarial prompt decomposition
+Latent space curvature anisotropy as a predictor of generalization brittleness in fine-tuned vision-language models
+Gradient interference geometry in multi-task learning as a function of task taxonomy distance
+Speculative decoding acceptance rate collapse under vocabulary distribution mismatch in draft-target model pairs
+KV cache poisoning dynamics and their downstream effects on long-context retrieval fidelity in RAG pipelines
+Reward model overoptimization trajectories under iterative RLHF loops with frozen versus co-evolving base models
+Sparse expert routing entropy as a signal for detecting distribution shift in mixture-of-experts inference
+Positional encoding degradation patterns in extended-context transformers beyond training length boundaries
+Feature suppression asymmetry between dominant and minority classes in contrastive self-supervised pretraining
+Activation steering vector drift across model depth as a function of concept abstraction hierarchy
+Gradient checkpointing allocation strategies under heterogeneous memory hierarchies in pipeline-parallel training
+Tokenizer fertility disparities as a source of cross-lingual capability gaps in multilingual foundation models
+Latent space curvature anisotropy and its effect on interpolation reliability in generative diffusion models
+Weight averaging trajectory sensitivity to learning rate schedule shape in stochastic weight averaging regimes
+Calibration collapse dynamics in continually fine-tuned classifiers under sequential domain adaptation
+Activation steering vector compositionality and interference patterns in multi-concept representation editing
+Sparse expert routing load imbalance as a training stability bottleneck in mixture-of-experts scaling
+Attention sink formation mechanisms and their downstream effects on long-context retrieval fidelity
+Reward model overoptimization trajectories under iterative RLHF with fixed preference datasets
+KV cache eviction policy sensitivity to positional encoding scheme in autoregressive inference systems
+Gradient checkpointing granularity tradeoffs and their interaction with optimizer state memory pressure during large-scale finetuning
+Speculative decoding draft model divergence under distribution shift and its effect on acceptance rate stability
+Feature superposition density as a function of layer depth and its implications for probing classifier reliability
+Cross-modal token alignment failures in vision-language models under domain-shifted visual inputs
+BatchNorm and LayerNorm interaction effects on loss landscape curvature during transformer pretraining at scale
+Activation steering vector compositionality and interference patterns when stacking multiple concept directions in residual stream space
+KV cache eviction policy design under heterogeneous sequence length distributions and its effect on prefill latency variance
+Reward model overoptimization dynamics as a function of base model capacity asymmetry between policy and evaluator
+Sparse expert routing collapse in mixture-of-experts models under long-tail token distributions and remediation via load balancing objective design
+Quantization error propagation across attention sink tokens and its downstream effect on context retention in long-sequence inference
+Speculative decoding draft model alignment strategies under domain-shifted prompt distributions and their effect on acceptance rate stability
+Gradient checkpointing granularity tradeoffs in pipeline-parallel training under memory-constrained regimes and their interaction with microbatch scheduling
+Embedding space anisotropy in large retrieval encoders and its effect on approximate nearest neighbor recall under high-dimensional clustering pressure
+Continual pretraining interference between domain-specific corpora and general language priors as a function of learning rate warmup geometry
+Tool call error recovery behavior in agentic LLM systems under partial observability and its interaction with context window position bias
+Activation steering vector transferability across fine-tuned model variants sharing a common base checkpoint
+KV cache eviction policy sensitivity to prompt structure variability in long-context inference serving
+Reward hacking surface area as a function of verifier granularity in outcome-supervised reinforcement learning
+Sparse expert routing collapse dynamics in MoE models under sustained distribution shift during inference
+Attention sink formation conditions and their downstream effect on sliding-window context extension fidelity
+Gradient checkpointing allocation strategies under heterogeneous memory pressure across pipeline-parallel stages
+Mechanistic drivers of loss spike recovery trajectories during large-batch warmup in transformer pretraining
+Token boundary sensitivity in subword tokenization schemes as a confound in cross-lingual transfer benchmarks
+Latency-accuracy tradeoff surfaces of speculative decoding under adversarial prompt length distribution shifts
+Feature suppression asymmetry between polysemantic and monosemantic neurons during model pruning
+Reward model collapse dynamics under iterative RLHF with fixed preference data
+KV cache eviction policy interaction effects with attention sink formation in long-context inference
+Systematic failure modes of embedding-based retrieval under query-document vocabulary mismatch in domain-shifted RAG pipelines
+Thermodynamic interpretations of activation sparsity emergence across training phases in sparse autoencoders
+Calibration degradation pathways in quantized models under covariate shift at deployment
+Gradient routing conflicts in multi-task learning under asymmetric task difficulty schedules
+Speculative decoding acceptance rate collapse under adversarial prompt distribution shift
+Feature superposition geometry changes across model merging interpolation paths
+Attention head redundancy accumulation dynamics during continual fine-tuning without regularization
+Synthetic data feedback loops in retrieval-augmented generation with model-generated document corpora
+Activation steering vector interference patterns in multi-concept latent space manipulation
+Quantization error propagation asymmetry across transformer depth during post-training INT4 compression
+Reward hacking emergence timelines as a function of policy network capacity and reward model complexity mismatch
+Cross-layer residual stream feature binding under token position aliasing in extended context windows
+Sparse expert routing entropy collapse in mixture-of-experts models under domain-homogeneous fine-tuning
+Gradient conflicts in multi-task learning under asymmetric loss curvature across task heads
+Speculative decoding acceptance rate degradation under distribution shift between draft and target models
+Mechanistic attribution of memorization versus generalization in few-shot in-context learning exemplar selection
+Thermal and power-budget constraints as first-class variables in edge inference architecture co-design
+Token budget sensitivity in chain-of-thought reasoning quality across problem difficulty gradients
+Latent space fragmentation in continual learning under replay-free constraints across non-stationary data streams
+Reward hacking surface area as a function of reward model architecture depth and training data diversity in RLHF pipelines
+Cross-layer attention sink dynamics and their causal role in context length generalization failures in transformer inference
+Operator fusion opportunity density as a predictor of quantization-induced accuracy degradation in heterogeneous neural network graphs
+Emergent communication protocol stability under population-level agent turnover in multi-agent reinforcement learning environments
+Gradient routing specificity collapse in mixture-of-experts models under token distribution shift at inference time
+Activation steering vector interference patterns when composed across orthogonal behavioral dimensions in instruction-tuned LLMs
+Memory bandwidth saturation as a ceiling on speculative decoding speedup across KV cache eviction policies
+Feature superposition density as a function of model width-to-depth ratio in sparse autoencoder decompositions
+Causal tracing fidelity loss under model merging via task-vector arithmetic in multilingual fine-tuned transformers
+Reward hacking surface area expansion under iterative RLHF rounds with fixed verifier capacity
+KV cache fragmentation effects on long-context retrieval fidelity across sliding-window and full-attention hybrid architectures
+Privileged basis emergence in residual stream representations as a function of layer normalization placement
+Quantization error propagation asymmetry between attention heads sorted by activation magnitude in post-training INT4 schemes
+Catastrophic interference localization in continual fine-tuning across domain-adjacent versus domain-orthogonal task sequences
+Sparse expert routing collapse under load imbalance between semantically similar versus dissimilar token distributions in mixture-of-experts inference
+Gradient signal attenuation across frozen adapter boundaries in layerwise-frozen fine-tuning regimes with heterogeneous learning rate schedules
+Positional encoding aliasing artifacts in sub-sequence stitching during speculative decoding with mismatched draft and target model context lengths
+Feature suppression asymmetry between polysemantic neurons under activation steering versus representation engineering intervention modalities
+Calibration drift in uncertainty estimation under distribution shift as a function of pre-training data mixture entropy and downstream task specificity
+Reward hacking propagation through verifier ensembles in reinforcement learning from AI feedback pipelines
+KV cache eviction policy interaction with attention sink formation under extended context in sliding window architectures
+Latency-accuracy tradeoff asymmetry in early-exit inference under adversarially structured versus naturally ambiguous inputs
+Cross-layer residual stream interference in multi-task fine-tuning with shared trunk and task-specific head architectures
+Embedding space fragmentation under continual learning with replay buffers of varying semantic coverage density
+Sparse expert routing instability under distribution shift in mixture-of-experts models with learned gating
+Token budget sensitivity in chain-of-thought length calibration across reasoning complexity gradients
+Gradient interference geometry between safety fine-tuning and capability retention in low-rank adapter composition
+Speculative decoding rejection rate dynamics under vocabulary distribution mismatch between draft and target models
+Positional encoding generalization failure modes in length extrapolation beyond training context boundaries
+Activation steering vector compositionality and interference under simultaneous multi-concept latent manipulation
+Reward model overoptimization trajectories in iterative RLHF with fixed versus periodically retrained preference models
+Cold-start token distribution pathology in autoregressive generation with constrained prefix forcing
+Attention sink formation dynamics and their downstream effects on key-value cache eviction strategies in long-context inference
+Cross-layer representation drift in early-exit architectures under adaptive compute halting thresholds
+Sparse expert routing entropy collapse in mixture-of-experts transformers under prolonged fine-tuning on narrow-domain corpora
+Gradient signal attenuation in retrieval-augmented generation pipelines during end-to-end differentiable training with approximate top-k retrieval
+Mechanistic drivers of length generalization failure in position-encoded transformers applied to structured algorithmic reasoning tasks
+Latent space curvature and interpolation fidelity degradation in variational models trained with heavy posterior regularization schedules
+Embedding space fragmentation under continual adapter-based fine-tuning without rehearsal across sequentially introduced task distributions
+Reward hacking propagation through multi-agent hierarchies with shared value function approximators under sparse inter-agent communication
+Activation steering vector interference when composing multiple concept directions in superposition-heavy residual stream layers
+Cold-start instability in online learning systems coupling bandit-based exploration with deep representation updates on non-stationary reward surfaces
+Calibration drift in uncertainty-quantifying neural networks under repeated human-in-the-loop correction with asymmetric feedback distributions
+Temporal context compression artifacts in long-horizon transformer inference under KV cache eviction policies with learned retention scoring
+Gradient conflict geometry in multi-task fine-tuning when task loss landscapes share Hessian eigenspace overlap across heterogeneous data regimes
+Emergent token economy distortions in speculative decoding pipelines under vocabulary distribution mismatch between draft and target models
+Representation collapse dynamics in self-supervised learning under augmentation policy shift between pretraining and downstream adaptation
+Latency-accuracy Pareto surface instability in cascaded inference systems with learned routing under non-stationary query distribution drift
+Catastrophic interference localization in continual learning across sparse mixture-of-experts architectures with asymmetric expert utilization
+Activation steering vector interference under superposition when concept directions share polysemantic neuron subspace overlap
+KV cache eviction policy induced context asymmetry in long-document retrieval augmented generation under heterogeneous chunk salience distributions
+Reward hacking topology in RLHF under evaluator blind spots created by systematic gaps between human preference elicitation protocol and deployment query distribution
+Precision-recall tradeoff surface fragility in embedding-based retrieval when quantization noise correlates with semantic boundary geometry
+Weight merging interference localization in task arithmetic under non-orthogonal fine-tuning subspace overlap across functionally adjacent model families
+Speculative decoding draft model alignment drift under distribution shift between target model fine-tuning domain and draft model pretraining corpus
+Gradient routing instability in mixture-of-experts load balancing under token distribution skew across heterogeneous batch compositions during continued pretraining
+Attention sink formation dynamics and their downstream effects on positional generalization in models trained with rotary versus learned absolute positional encodings
+Latent space fragmentation in continual learning under replay buffer size constraints when task boundaries induce conflicting representational pressure on shared encoder layers
+Tool call error propagation and recovery strategy divergence in multi-step agentic pipelines under partial observability and stochastic external API failure modes
+Activation steering vector compositionality breakdown under competing behavioral objectives in multi-task instruction-tuned models
+KV cache eviction policy interaction with context length generalization in sliding window versus full attention hybrid architectures
+Reward model overoptimization dynamics under iterative RLHF cycles when policy and reward model share pretrained backbone weights
+Cross-layer representation reuse patterns in parameter-efficient fine-tuning methods and their effect on catastrophic forgetting boundaries
+Inference-time compute allocation asymmetry between reasoning trace generation and answer extraction under variable problem difficulty in chain-of-thought prompting
+Speculative decoding draft model divergence under domain shift and its effect on acceptance rate stability across token position distributions
+Gradient routing interference patterns in mixture-of-experts models during multi-objective fine-tuning with heterogeneous task loss scales
+Embedding space anisotropy accumulation across transformer depth and its downstream effect on retrieval quality in dense passage encoders
+Mechanistic attribution drift in sparse autoencoder features across pretraining checkpoints as a proxy for capability emergence timing
+Tool call error propagation and recovery strategy degradation in multi-step agentic pipelines under compounding context window pressure
+Activation steering vector compositionality breakdown under semantic conflict in multi-concept interventions
+KV cache eviction policy interaction with long-range attention sink formation in extended context inference
+Reward hacking detection latency as a function of reward model expressivity and RL rollout diversity during RLHF
+Cross-layer residual stream feature suppression dynamics during in-context learning prompt saturation
+Quantization-induced calibration set sensitivity and its asymmetric effect on tail token prediction confidence
+Sparse expert routing collapse under distribution shift in mixture-of-experts models with load balancing constraints
+Gradient signal attenuation across frozen adapter boundaries in modular fine-tuning architectures
+Speculative decoding rejection rate sensitivity to draft model capacity mismatch under domain-shifted prompts
+Embedding space fragmentation in continual learning systems as a function of replay buffer diversity and task boundary sharpness
+Attention head redundancy emergence and its relationship to layer-wise pruning stability in post-training compression
+Activation steering vector interference under multi-objective alignment constraints in RLHF-trained models
+KV cache eviction policy sensitivity to positional encoding schemes in long-context inference under memory pressure
+Tokenizer fertility asymmetry as a confound in cross-lingual transfer benchmarks for low-resource language adaptation
+Loss landscape curvature divergence between base and instruction-tuned models as a predictor of catastrophic forgetting risk
+Reward model score distribution shift under adversarial prompt rephrasing in preference-based fine-tuning pipelines
+Speculative decoding acceptance rate degradation under distribution shift between draft and target models at inference time
+Gradient checkpointing granularity trade-offs in memory-compute Pareto optimization for large-scale training runs
+Feature superposition geometry changes in residual stream representations across fine-tuning regimes in sparse autoencoders
+Attention sink formation dynamics as a function of positional bias initialization in transformer pretraining
+Tool call error propagation and compounding failure modes in multi-step agentic LLM pipelines under partial observability
+Activation steering vector transferability across model families with mismatched tokenizers and embedding dimensions
+KV cache eviction policy design under heterogeneous request arrival patterns in high-concurrency LLM serving
+Reward hacking morphology in RLHF as a function of verifier granularity and proxy reward expressivity
+Continual pretraining interference between domain-specific corpora and general capability retention in dense transformers
+Precision-recall asymmetry in retrieval-augmented generation pipelines under out-of-distribution query semantics
+Sparse expert routing collapse in mixture-of-experts transformers under long-tail token distributions and load-balancing penalty schedules
+Latency-accuracy tradeoff surfaces in speculative decoding under adversarial prompt distributions that systematically misalign draft and target model predictions
+Test-time compute scaling behavior in chain-of-thought reasoning when intermediate step verification is delegated to a weaker verifier model
+Gradient interference topology in multi-task fine-tuning as a function of task phylogeny and shared versus task-specific parameter allocation
+Embedding space anisotropy accumulation during instruction fine-tuning and its downstream effects on semantic similarity calibration in retrieval tasks
+Mechanistic drift in learned optimizers when meta-trained distribution shifts at inference time across task families
+Failure modes of reward model ensembles under distribution shift in RLHF pipelines with heterogeneous annotator populations
+Attention sink formation dynamics in extended-context transformers as a function of positional encoding scheme and fine-tuning objective
+Calibration collapse in confidence-elicitation prompting under repeated self-consistency sampling across model scale
+Feature suppression asymmetry in activation steering interventions applied at varying residual stream depths during multi-step reasoning
+Latent space fragmentation in mixture-of-experts routing under continual fine-tuning with non-stationary task streams
+Emergent communication protocol instability in multi-agent reinforcement learning when agent populations are asynchronously updated
+Gradient conflict geometry in multi-objective loss surfaces during simultaneous alignment and capability fine-tuning
+Temporal credit assignment breakdown in model-based planners trained with retrospective relabeling under sparse reward
+Compositionality failure boundaries in retrieval-augmented generation when retrieved context contradicts parametric knowledge at varying specificity levels
+Activation steering vector interference patterns during simultaneous multi-concept interventions in residual stream space
+Speculative decoding acceptance rate degradation under distribution shift between draft and target model fine-tuning trajectories
+Topology preservation failure in embedding space quantization across heterogeneous downstream retrieval workloads
+Reward model overoptimization dynamics when policy and reward model share a frozen pretrained backbone
+Cross-layer attention sink migration under extended context length scaling beyond training distribution
+Gradient checkpointing interaction effects with mixed-precision training under non-uniform layer sensitivity profiles
+KV cache eviction policy sensitivity to positional encoding scheme across sliding window and full attention hybrid architectures
+Feature superposition density shifts in sparse autoencoder latent spaces as a function of model width-to-depth ratio
+Batched inference throughput collapse under adversarial prompt length variance in continuous batching schedulers
+Cold-start embedding drift in retrieval-augmented generation pipelines when corpus and query encoders fine-tune asynchronously
+Reward model overoptimization dynamics under iterative RLHF with frozen versus co-evolving reference policies
+Speculative decoding acceptance rate degradation under distribution shift between draft and target model fine-tuning trajectories
+Cross-layer activation steering interference patterns when composing multiple concept vectors in residual stream space
+Quantization error amplification through attention sink tokens under post-training static versus dynamic calibration schemes
+Retrieval latency versus faithfulness tradeoff curves under varying chunk boundary strategies in long-document dense passage retrieval
+Gradient checkpointing frequency scheduling under heterogeneous memory pressure across pipeline-parallel stages
+Emergent tokenization artifacts in subword vocabularies trained on code-natural language interleaved corpora
+Feature suppression asymmetry between activation patching and causal scrubbing in sparse autoencoder decompositions
+Calibration drift in temperature-scaled classifiers under label-shift induced by continuous model updating
+Mixture-of-experts routing collapse sensitivity to initialization variance across expert capacity factor regimes
+Speculative decoding acceptance rate degradation under adversarial prompt distributions in aligned language models
+KV cache eviction policy interactions with attention sink formation in long-context inference
+Reward hacking surface area expansion as a function of reward model architecture depth and training data diversity
+Quantization error propagation asymmetry between forward and backward passes in mixed-precision fine-tuning
+Cross-layer residual stream interference patterns during in-context learning versus weight-encoded knowledge retrieval
+Sparse expert routing collapse dynamics under distribution shift in mixture-of-experts transformers
+Positional encoding generalization failure modes at sequence lengths beyond training context in rotary and ALiBi schemes
+Activation steering vector compositionality and interference in multi-concept representation editing
+Cold-start latency attribution across compiler, runtime, and weight-loading stages in serverless LLM inference
+Gradient signal sparsity and dead neuron accumulation in state space models trained with selective scan mechanisms
+Speculative decoding rejection rate drift under adversarial prefix injection in autoregressive language models
+Reward model overoptimization geometry in RLHF pipelines under iterative policy update pressure
+Cross-layer KV cache sharing coherence breakdown in grouped-query attention under long-document retrieval workloads
+Training instability onset conditions in hybrid attention-SSM architectures at scale transitions
+Tool-call hallucination compounding dynamics in multi-step agentic chains under partial observability
+Activation steering vector interference patterns under multi-concept superposition in residual stream factorization
+Cold-start distribution mismatch propagation in continual fine-tuning without replay across domain-shifted corpora
+Quantization error accumulation asymmetry across attention head importance tiers in post-training INT4 compression
+Emergent prompt sensitivity phase transitions in instruction-tuned models near capability threshold boundaries
+Sparse expert routing collapse dynamics in MoE architectures under long-tail token distribution skew
+Gradient checkpointing recomputation scheduling under heterogeneous memory bandwidth constraints in pipeline-parallel training
+Positional encoding extrapolation failure modes in length-generalization stress tests across transformer variants
+KV cache eviction policy sensitivity to query locality structure in long-context retrieval-augmented generation
+Reward hacking taxonomy and detection latency in RLHF pipelines with learned reward model ensembles
+Tool-call dependency graph ambiguity resolution strategies in multi-step agentic execution under partial observability
+Activation sparsity exploitation for dynamic compute routing in mixture-of-experts inference serving
+Quantization error accumulation across matmul chains in low-bit fine-tuned models under distribution shift
+Speculative decoding draft model alignment drift and its effect on acceptance rate stability over long sessions
+Cross-layer attention sink formation and its interaction with context window utilization in decoder-only architectures
+Dataloader throughput bottlenecks and straggler mitigation in heterogeneous GPU cluster training at scale
+Gradient checkpointing granularity tradeoffs under memory-compute Pareto pressure in long-context fine-tuning
+KV cache eviction policy design for multi-tenant LLM serving under mixed-length request distributions
+Reward model overoptimization dynamics and proxy gaming onset detection in iterative RLHF pipelines
+Embedding space fragmentation in continual learning systems with expanding vocabularies and domain-shifted corpora
+Prefix sharing collision rates and cache invalidation overhead in batched inference with structured prompt templates
+Speculative decoding rejection sampling calibration under vocabulary distribution shift in domain-adapted draft models
+Heterogeneous operator fusion boundary selection in ML compiler backends under dynamic shape constraints
+Attention sink formation dynamics and their interaction with positional encoding schemes during extended context extrapolation
+Gradient noise covariance structure in federated learning under non-IID data partitioning and partial participation regimes
+Activation quantization error propagation across transformer depth under mixed-precision training with stochastic rounding
+Inference-time compute allocation policies for tree-search decoding under learned process reward model uncertainty
+Weight-sharing interference between task-specific LoRA adapters merged into a shared base model under domain-skewed fine-tuning
+Prefill-decode disaggregation latency asymmetry and its interaction with batch scheduling strategies in large-scale LLM serving clusters
+Feature absorption and polysemanticity redistribution during progressive layer pruning in sparse transformer inference
+Tokenization boundary misalignment as a systematic error amplifier in cross-lingual transfer for morphologically rich languages
+Gradient signal attenuation under speculative decoding rollback in multi-draft parallel generation with shared draft models
+Optimizer state compression fidelity loss and its asymmetric effect on rare versus frequent token gradient updates in large-scale distributed training
+Reward hacking through latent feature steering in RLHF-trained models probed via activation patching across fine-tuning checkpoints
+Cache coherence and stale embedding propagation in retrieval-augmented generation systems with asynchronous index updates
+Structured sparsity pattern formation during pretraining and its interaction with downstream task sensitivity in pruning-aware neural scaling
+Attention sink dynamics and positional generalization failure in extended-context transformers under distribution-shifted retrieval prefixes
+KV cache eviction policy interaction with in-context learning stability across heterogeneous prompt length distributions
+Tokenizer fertility asymmetry and its compounding effect on cross-lingual transfer in multilingual foundation models
+Emergent circuit reuse across semantically distinct tasks in superposition-heavy MLP layers and its implications for modular fine-tuning
+Latency-accuracy tradeoff shaping in speculative rejection sampling under adversarial draft quality degradation
+Gradient routing interference between continual learning objectives and frozen pretrained subnetworks under non-stationary task boundary detection
+Reward hacking topology in RLHF under partial observability of preference model confidence calibration
+Mechanistic divergence between chain-of-thought scratchpad representations and final answer circuitry in reasoning-specialized models
+Sparse expert load collapse dynamics in mixture-of-experts routing under long-tail input distributions and adaptive capacity constraints
+Feature geometry drift in activation space across quantization granularities and its interaction with structured pruning mask stability
+Latent space curvature anisotropy and its downstream effect on interpolation fidelity in diffusion model inversion under distribution shift
+Attention sink migration patterns across context length extrapolation regimes in architectures trained with fixed positional encodings
+Gradient signal propagation asymmetry between early-exit branches and backbone optimization in adaptive computation networks
+Cross-modal representational alignment collapse in vision-language models under fine-tuning on unimodal task distributions
+Compiler-aware kernel fusion brittleness in ML runtimes under mixed-precision operator scheduling and dynamic shape batching
+Speculative decoding draft model divergence under domain shift and its effect on acceptance rate stability
+Reward model overoptimization dynamics in RLHF pipelines with heterogeneous preference data sources
+Silent data corruption propagation through quantization-aware training checkpoints across hardware generations
+Emergent tokenization artifacts and their amplification in retrieval-augmented generation retrieval boundary misalignment
+KV cache eviction policy sensitivity to prompt structure variability in long-context inference serving systems
+Gradient checkpointing memory-compute tradeoff asymmetries under heterogeneous pipeline parallelism schedules
+Activation steering vector interference when composed across orthogonal behavioral dimensions in transformer residual streams
+Thermal throttling-induced numerical drift accumulation in distributed training across commodity GPU clusters
+Prompt sensitivity in structured prediction tasks as a function of schema surface form versus semantic content
+Data mixture curriculum ordering effects on catastrophic forgetting rate in continual fine-tuning of foundation models
+Sparse expert routing collapse dynamics under load imbalance in mixture-of-experts inference at scale
+Embedding space fragmentation in retrieval-augmented generation systems across heterogeneous document corpus distributions
+Quantization error amplification pathways through attention sink tokens in post-training compressed LLMs
+Causal intervention failure modes in model-edited factual associations under compositional reasoning pressure
+Reward hacking morphology shifts across policy update density in RLHF fine-tuning of instruction-following models
+Gradient routing instability in modular neural architectures under dynamic task distribution shift
+KV cache eviction policy sensitivity to prompt structure variance in long-context inference serving
+Activation steering vector interference patterns across superimposed representational subspaces in polysemantic neurons
+Speculative decoding acceptance rate degradation under distributional mismatch between draft and target model fine-tuning regimes
+Failure mode taxonomy of tool-use grounding in multi-step agentic pipelines under partial observability constraints
+Reward model overoptimization dynamics in iterative RLHF pipelines under expanding action spaces
+Embedding space fragmentation in continual learning systems with heterogeneous replay buffer composition
+Latency-accuracy Pareto frontier collapse in cascaded inference architectures under correlated query load
+Cross-attention sink formation and positional bias propagation in encoder-decoder models with asymmetric sequence lengths
+Mechanistic attribution drift in sparse autoencoders retrained on shifted feature activation distributions
+Gradient routing conflicts in multi-task learning under dynamically reweighted loss landscapes
+Speculative decoding failure modes under adversarial draft model selection in heterogeneous GPU clusters
+Feature collapse asymmetry in self-supervised contrastive learning with hard negative mining curricula
+Activation checkpointing granularity tradeoffs in memory-constrained fine-tuning of mixture-of-experts architectures
+Circuit-level interference patterns in weight-shared transformers during simultaneous multi-prompt batch inference
+Sparse attention sink dynamics in long-context KV cache eviction under retrieval-augmented generation workloads
+Cross-layer gradient signal attenuation in adapter-based parameter-efficient fine-tuning stacks
+Tokenizer fertility mismatch effects on multilingual instruction-following alignment across shared vocabulary models
+Reward model overoptimization trajectories under iterative online RLHF with changing human rater pools
+Temporal distribution shift propagation in streaming feature pipelines for real-time ML inference systems
+Speculative decoding draft model selection under heterogeneous hardware constraints and dynamic sequence length distributions
+Cold-start latency asymmetry in serverless ML inference runtimes across quantization regimes
+Activation checkpointing granularity tradeoffs in memory-constrained distributed training with pipeline parallelism
+Embedding space fragmentation under continual fine-tuning with elastic vocabulary expansion
+Calibration drift in uncertainty-aware classifiers deployed across shifting label ontologies
+Reward model overoptimization dynamics under sparse human feedback with non-stationary preference distributions
+KV cache eviction policy sensitivity to attention entropy patterns in long-context retrieval tasks
+Cross-accelerator numerical divergence accumulation in mixed-precision training across extended run durations
+Tokenizer boundary artifacts and their propagation through downstream task-specific fine-tuning objectives
+Feature store staleness tolerance thresholds under concept drift in real-time recommendation pipelines
+Sparse activation routing instability in mixture-of-experts models under distribution shift at inference time
+Gradient compression fidelity loss in asynchronous federated learning with heterogeneous client update frequencies
+Embedding space anisotropy as a diagnostic signal for memorization versus generalization in large language models
+Speculative decoding acceptance rate sensitivity to draft model capacity gaps across domain-shifted prompts
+Positional encoding extrapolation failure modes and their interaction with instruction-tuned behavioral constraints
+Quantization-aware training divergence under mixed-precision optimizer state asymmetry
+Attention sink formation and its causal role in context length degradation beyond pretraining horizons
+Cross-layer parameter sharing collapse in depth-efficient transformer architectures during fine-tuning
+Latency-throughput Pareto frontier shifts in disaggregated prefill-decode serving under bursty request arrival
+Feature attribution instability in saliency methods under semantically equivalent input perturbations
+Gradient checkpointing interaction effects with optimizer momentum buffers under pipeline-parallel micro-batch scheduling
+Token routing entropy collapse in sparse MoE models during domain-adaptive continued pretraining
+Positional encoding extrapolation failure modes in retrieval-augmented generation with heterogeneous chunk lengths
+Reward model rank inconsistency under paraphrase-equivalent prompt reformulations in RLHF pipelines
+Embedding space anisotropy amplification in contrastive fine-tuning under hard-negative mining curriculum shifts
+Attention sink formation and persistence across layers in long-context transformers under sliding-window attention approximations
+Gradient signal attenuation in adapter-based parameter-efficient fine-tuning under deep residual bypassing
+KV cache quantization asymmetry between prefill and decode phases in mixed-precision inference serving
+Tokenizer boundary misalignment effects on subword representation stability in cross-lingual transfer learning
+Speculative decoding acceptance rate collapse under distribution shift between draft and target model pretraining corpora
+Neurosymbolic bottleneck failures in learned reward decomposition under sparse human feedback
+Positional encoding collapse in length-generalization regimes beyond training distribution for rotary embedding variants
+Gradient routing instability in mixture-of-experts gating under load-balanced training with auxiliary loss annealing
+Attention head redundancy amplification during iterative pruning cycles in transformer compression pipelines
+Feature suppression dynamics in sparse autoencoder reconstruction under high-activation polysemanticity regimes
+Catastrophic interference in continual fine-tuning of vision-language models under domain-sequential pretraining with frozen visual encoders
+KV cache fragmentation under speculative decoding with tree-structured draft models in long-context inference
+Reward signal dilution in multi-objective RLHF under conflicting annotator preference distributions with non-stationary Pareto frontiers
+Embedding anisotropy collapse in contrastive pretraining under hard negative mining with false negative contamination
+Prefix sharing invalidation under dynamic prompt composition in disaggregated prefill-decode serving architectures
+Gradient routing failure modes in sparse mixture-of-experts under load-imbalanced token distributions with auxiliary loss saturation
+Attention sink formation and positional bias drift in extended-context transformers under sliding window hybrid attention architectures
+Quantization error accumulation asymmetry in mixed-precision training across heterogeneous pipeline stages with stale gradient compensation
+Feature collapse in self-supervised pretraining under augmentation-invariance conflicts with semantically destructive transformations
+Tokenizer-induced domain shift in cross-lingual transfer when subword fertility diverges between pretraining and fine-tuning corpora
+Activation steering interference patterns in multi-layer residual streams when sparse autoencoder features share overlapping circuit substrates
+KV cache coherence breakdown in multi-agent inference sharing prefix trees under asynchronous generation and mid-sequence context mutation
+Gradient signal attenuation in long-horizon RLHF rollouts when reward sparsity interacts with clipped importance weights across policy update boundaries
+Embedding manifold fragmentation under continual vocabulary expansion in domain-adaptive pretraining with frozen positional encodings
+Prefill latency variance amplification in disaggregated serving under heterogeneous prompt length distributions with dynamic chunked attention scheduling
+Optimizer state sharding asymmetry in ZeRO-3 under pipeline bubble accumulation with non-uniform micro-batch sizing
+Attention sink formation dynamics in extended context windows under sliding window hybrid attention with learned positional biases
+Reward model calibration collapse under distribution shift when preference data is collected from policy rollouts during iterative RLHF
+Sparse expert load imbalance propagation in hierarchical mixture-of-experts under correlated input clustering across routing layers
+Quantization error accumulation asymmetry in mixed-precision training when gradient scaling interacts with stochastic rounding across heterogeneous layer types
+Gradient checkpointing recomputation skew under asymmetric forward-backward memory pressure in activation-offloaded distributed training
+KV cache fragmentation and eviction thrashing in paged attention systems under bursty multi-tenant request concurrency
+Feature drift detection latency versus false-positive tradeoff in online learning pipelines with concept drift under non-stationary label distributions
+Embedding table sharding collision and hotspot formation in recommendation systems under power-law access skew with synchronous all-reduce
+Prefill-decode disaggregation scheduling instability under variable prompt length distributions with heterogeneous accelerator memory bandwidth
+Speculative execution rollback cost asymmetry in tree-structured draft models under vocabulary-skewed target distributions
+Cross-attention sink formation and positional bias entrenchment in encoder-decoder models under extreme input-output length ratio mismatch
+Optimizer state memory fragmentation and allocation stall patterns in ZeRO-3 training under heterogeneous parameter update frequency across layer types
+Reward signal sparsity amplification and gradient vanishing interaction in long-horizon RLHF with sparse binary outcome feedback
+Quantization error accumulation anisotropy across transformer depth under mixed-precision inference with asymmetric per-channel calibration granularity
+Activation entropy collapse and representational homogenization in deep residual networks under aggressive dropout regularization during fine-tuning
+KV cache fragmentation under dynamic sequence length variation in continuous batching inference servers with preemptive scheduling
+Gradient accumulation phase misalignment and effective batch size drift in distributed training under asynchronous parameter server architectures
+Tokenizer boundary artifact propagation and subword fertility mismatch amplification in cross-lingual transfer with mismatched vocabulary priors
+Attention pattern sparsification failure modes and dynamic pruning threshold instability in adaptive sparse attention under distribution-shifted inference workloads
+Positional encoding interpolation artifacts and extrapolation boundary collapse in RoPE-based long-context transformers under context length generalization
+Gradient signal attenuation and dead neuron accumulation asymmetry in gated linear units versus SwiGLU activations during low-rank adapter fine-tuning
+Prefill-decode disaggregation latency imbalance and cross-instance KV migration overhead in heterogeneous GPU cluster inference orchestration
+Feature store staleness propagation and training-serving skew amplification in real-time ML pipelines with asynchronous feature computation graphs
+Mixture-of-experts load imbalance entrenchment and auxiliary loss saturation under continual domain-incremental fine-tuning with frozen routing networks
+Sparse attention pattern degeneracy and sink token entrenchment under extended sequence length in sliding window and landmark attention variants
+Gradient checkpointing recomputation cost asymmetry and activation memory fragmentation under hybrid tensor-pipeline parallelism with uneven microbatch scheduling
+Weight averaging interference and loss landscape flatness collapse in model merging under heterogeneous fine-tuning objective mismatch
+Vocabulary alignment drift and cross-lingual embedding isotropy breakdown in multilingual models under continued monolingual pretraining
+Quantization error accumulation asymmetry across transformer depth under mixed-precision inference with per-channel versus per-tensor activation scaling schemes
+Neuron polysemanticity amplification and feature splitting failure under targeted activation steering with conflicting sparse autoencoder decompositions
+Prefill-decode disaggregation latency pathology under heterogeneous KV cache reuse patterns with asymmetric batching pressure across request priority tiers
+Replay buffer compositional coverage collapse and gradient interference in continual fine-tuning under non-stationary task boundary detection failure
+Logit lens trajectory divergence and residual stream rank collapse in early-exit inference under adaptive computation halting with learned confidence thresholds
+Reward model calibration breakdown under distribution shift between held-out preference probe sets and live annotation populations in iterative RLHF pipelines
+Embedding drift accumulation and anisotropy collapse in retrieval-augmented generation under iterative index refresh with asymmetric encoder fine-tuning
+Attention sink formation dynamics and positional bias entrenchment in long-context transformers under sliding window and ALiBi hybrid positional encoding schemes
+Gradient variance explosion under micro-batch heterogeneity in FSDP with mixed quantization precision boundaries across tensor parallel shards
+Surrogate loss misalignment and Pareto front collapse in multi-objective RLHF under conflicting reward signal weighting across annotator subpopulation clusters
+KV cache fragmentation and prefix tree invalidation cascades in continuous batching systems under dynamic sequence length distribution shift with speculative decoding rollback pressure
+Activation steering interference under cross-layer superposition in sparse autoencoders during multi-concept compositional prompts
+Tokenizer fertility mismatch propagation through embedding initialization under vocabulary extension with frozen transformer backbone weights
+Reward model overoptimization topology and mode collapse under iterative RLHF with ensemble disagreement-gated data filtering
+Cold-start latency amplification in serverless ML inference under bursty traffic with heterogeneous model shard warm-up asymmetry
+Temporal distribution shift accumulation in streaming feature pipelines under delayed label arrival with online calibration feedback lag
+Gradient conflict geometry in multi-task learning under dynamic loss balancing with task affinity-aware gradient surgery
+KV cache fragmentation under speculative decoding with tree-structured draft expansion and prefix-sharing eviction contention
+Attention sink migration patterns in long-context transformers under sliding window hybridization with positional encoding extrapolation failure
+Optimizer state heterogeneity accumulation in federated learning under system-heterogeneous partial participation with momentum staleness asymmetry
+Feature store consistency drift under dual-write synchronization failure in low-latency online inference with asynchronous batch recomputation
+Activation sparsity collapse in mixture-of-experts routing under load-balanced training with auxiliary loss interference on expert specialization
+Quantization error amplification in long chain-of-thought reasoning under mixed-precision decoding with KV cache compression asymmetry
+Gradient variance explosion in parameter-efficient fine-tuning under adapter rank heterogeneity with frozen backbone feature drift
+Semantic hash collision frequency in approximate nearest neighbor retrieval under dynamic embedding updates with index staleness in real-time RAG pipelines
+Prompt sensitivity instability in structured output generation under constrained decoding with grammar-guided beam search and token budget pressure
+Attention sink reinforcement under extended context window fine-tuning with positional encoding extrapolation failure at inference boundaries
+Batch normalization statistic divergence in federated learning under non-IID data heterogeneity with client drift amplification across communication rounds
+Token probability calibration collapse in retrieval-augmented generation under document relevance score fusion with generator confidence miscalibration
+Latency variance amplification in multi-tenant LLM serving under preemptive scheduling with priority inversion and SLO violation cascades
+Embedding anisotropy accumulation in continual sentence encoder training under domain shift with representation collapse in low-frequency semantic subspaces
+Gradient conflict geometry in multi-task learning under dynamic loss weighting with Pareto front instability across heterogeneous task curvatures
+Attention head redundancy propagation in parameter-efficient fine-tuning under LoRA rank underspecification with capacity collapse in downstream task transfer
+KV cache fragmentation under speculative decoding with draft-target sequence divergence causing prefix invalidation and memory reclamation overhead spikes
+Feature interaction sparsity drift in learned embedding tables for recommendation systems under exposure bias with gradient starvation in long-tail item clusters
+Cross-layer activation norm skew in deep residual networks under mixed-precision training with gradient scale mismatch triggering loss spike cascades at precision boundaries
+Gradient accumulation fidelity degradation in micro-batch training under heterogeneous data distributions with loss landscape curvature asymmetry across accumulation steps
+Attention sink formation and token eviction bias in sliding-window context compression under long-document retrieval with semantic coherence collapse at eviction boundaries
+Reward shaping interference in multi-task reinforcement learning from human feedback with policy gradient cross-contamination under shared value function approximation
+Sparse expert underutilization cascades in mixture-of-experts models under load-imbalanced fine-tuning with auxiliary loss masking and router confidence collapse in domain-shifted inputs
+Compounding tokenization artifacts in code generation models under subword vocabulary mismatch with identifier fragmentation causing structural hallucination in syntax-sensitive completion tasks
+Positional encoding extrapolation failure in length-generalization tasks under out-of-distribution sequence lengths with attention score distortion beyond training context boundaries
+Gradient conflict resolution breakdown in multi-objective fine-tuning under Pareto-dominated loss surfaces with task interference amplification across shared transformer layers
+Speculative decoding draft quality collapse under distribution shift with acceptance rate degradation and latency regression in adaptive token generation pipelines
+Feature suppression and polysemanticity entanglement in sparse autoencoder decomposition of superimposed representations under high activation density regimes
+Optimizer state staleness accumulation in asynchronous federated learning under heterogeneous client update frequencies with convergence instability from delayed gradient aggregation
+Embedding drift under continual adapter stacking in parameter-efficient fine-tuning with representation collapse across sequential task boundaries
+Attention sink formation and token budget misallocation in long-context retrieval-augmented generation under sparse evidence distribution
+Cross-layer gradient magnitude asymmetry in deep transformer training with residual stream saturation and learning rate sensitivity divergence
+Latency-throughput tradeoff breakdown in heterogeneous batching under mixed-precision KV cache with memory bandwidth contention at decode time
+Reward signal sparsity amplification in process-supervised reinforcement learning with credit assignment failure across multi-step reasoning chains
+Activation pattern divergence in mixture-of-experts routing under domain-shifted inference with expert utilization collapse and load imbalance cascades
+Gradient accumulation fidelity loss in micro-batch training under asynchronous distributed optimization with stale parameter interference and staleness-aware correction limits
+Feature memorization versus generalization boundary in overparameterized retrieval encoders under dense passage fine-tuning with in-batch negative contamination
+Attention head redundancy and pruning sensitivity asymmetry in vision-language models under cross-modal alignment fine-tuning with task-specific head specialization drift
+Token prediction confidence miscalibration in instruction-tuned models under distribution-shifted prompting with temperature scaling failure and logit distortion from RLHF
+Positional encoding degradation in long-context transformers under document concatenation with inter-segment boundary artifacts and attention sink amplification
+Soft prompt sensitivity collapse in parameter-efficient fine-tuning under task interpolation with prompt token gradient vanishing and cross-task interference
+Latency variance instability in batched inference under mixed-length request scheduling with padding waste asymmetry and queue starvation at tail percentiles
+Weight sharing conflict in multi-task adapter fusion under gradient interference with task affinity mismatch and adapter capacity saturation
+Embedding drift accumulation in retrieval-augmented generation under iterative index updates with stale vector staleness propagation and query-document score distribution skew
+Speculative decoding acceptance rate collapse under domain-shifted draft models with token tree pruning inefficiency and verification overhead inversion at low-temperature regimes
+Feature store consistency violations in online-offline skew during real-time model serving with point-in-time correctness failures and training-serving distribution divergence under lag accumulation
+Gradient conflict localization in mixture-of-experts sparse routing under load imbalance with expert collapse asymmetry and auxiliary loss interference at scale
+Positional encoding generalization failure in length-extrapolation regimes under rotary embedding saturation with attention entropy collapse and perplexity cliff discontinuity
+Cross-lingual transfer degradation in multilingual fine-tuning under script-distance asymmetry with catastrophic interference in shared subword space and per-language capacity starvation
+Quantization error amplification in activation outlier regimes under per-tensor scaling with clipping distortion accumulation across residual streams and calibration set distribution mismatch
+Checkpoint averaging instability in stochastic weight averaging under non-convex loss surface heterogeneity with interpolation path curvature bias and convergence basin misalignment
+Speculative decoding draft model divergence under distribution shift with acceptance rate collapse and latency regression in adaptive token tree expansion
+Context window utilization inefficiency in retrieval-augmented generation under chunk boundary misalignment with semantic truncation artifacts and positional crowding in long-context fusion
+Tokenizer vocabulary mismatch in domain-adaptive pretraining under subword fertility skew with embedding space fragmentation and out-of-vocabulary generalization failure at inference
+Gradient conflict amplification in multi-objective fine-tuning under Pareto front instability with loss weighting sensitivity and task interference in shared parameter subspaces
+Activation checkpointing recomputation skew in heterogeneous pipeline stages under memory pressure asymmetry with recompute latency variance and throughput degradation in micro-batch scheduling
+Sparse attention pattern rigidity under input length distribution shift with head specialization collapse and retrieval failure in dynamic context structures
+Quantization-aware training calibration dataset mismatch under deployment distribution divergence with outlier channel sensitivity and accuracy cliff behavior at reduced bit-widths
+Reward model distribution shift under iterative RLHF policy updating with overoptimization boundary erosion and proxy reward exploitation in out-of-distribution action spaces
+Cross-layer representation alignment failure in knowledge distillation under capacity gap asymmetry with intermediate feature collapse and student generalization degradation in low-data regimes
+Prefill latency explosion under heterogeneous prompt length batching with attention compute imbalance and scheduling starvation in disaggregated inference serving systems
+Gradient conflict resolution failure in multi-objective fine-tuning under competing loss surface curvature with Pareto front collapse and objective interference in shared representation layers
+Token embedding space fragmentation under vocabulary extension with subword boundary misalignment and semantic drift in domain-adaptive continual pre-training
+Speculative decoding draft model staleness under rapid policy shift with acceptance rate collapse and latency regression in online RLHF serving pipelines
+Mixture-of-experts load imbalance propagation under adversarial input routing with expert utilization collapse and capacity overflow cascades in distributed training
+Activation checkpointing granularity mismatch under heterogeneous pipeline stage memory pressure with recomputation overhead spikes and throughput degradation in large-scale model parallelism
+Embedding anisotropy amplification under contrastive fine-tuning with angular collapse in high-frequency token clusters and retrieval degradation in dense passage ranking
+Reward model ensemble disagreement propagation under distribution shift with variance explosion in uncertainty-weighted policy optimization and alignment instability in low-data regimes
+Sparse attention pattern ossification under extended context fine-tuning with head specialization lock-in and generalization failure across heterogeneous document structure distributions
+KV cache quantization error accumulation under mixed-precision speculative decoding with precision boundary artifacts and perplexity drift in long-horizon autoregressive generation
+Tokenizer-model co-training misalignment under iterative vocabulary pruning with suboptimal fertility distributions and downstream task performance collapse in multilingual transfer
+Neuron polysemanticity entrenchment under progressive model pruning with feature disentanglement failure in sparse activation regimes and interpretability breakdown in post-hoc mechanistic analysis
+Optimizer state staleness accumulation under asynchronous gradient aggregation in heterogeneous compute clusters with momentum corruption and generalization gap widening in federated fine-tuning
+Attention entropy collapse under iterative self-distillation with confidence sharpening cascades and diversity loss in ensemble compression pipelines
+Gradient signal fragmentation under extreme pipeline depth with micro-batch boundary artifacts and weight update decoherence in asynchronous model parallelism
+Feature attribution drift under continual reward model updating with preference boundary erosion and reward landscape topology shifts in online RLHF regimes
+Cross-layer activation correlation buildup under deep residual networks with redundancy entrenchment and effective depth collapse in late-stage fine-tuning
+Retrieval latency asymmetry under heterogeneous shard replication in distributed vector databases with staleness propagation and recall degradation under concurrent write-heavy workloads
+Tokenizer boundary misalignment under subword vocabulary transfer in domain-adaptive pretraining with fertility skew accumulation and sequence length distribution shift
+Optimizer state desynchronization under mixed-precision training with stochastic rounding error compounding and loss landscape curvature distortion in adaptive gradient methods
+Attention pattern rigidity under prompt template overfitting in instruction-tuned models with generalization surface collapse and sensitivity redistribution across semantic perturbation classes
+Sparse activation inconsistency under dynamic expert routing in mixture-of-experts inference with load imbalance entrenchment and throughput variance under heterogeneous request batching
+Embedding space fragmentation under multilingual joint training with interlingual interference accumulation and cross-lingual transfer degradation at low-resource language boundaries
+Gradient signal dilution under layer-wise learning rate heterogeneity in depth-scaled transformer pretraining with convergence asymmetry and parameter utilization collapse at boundary layers
+KV cache coherence breakdown under speculative decoding with draft model divergence accumulation and memory bandwidth contention in multi-tenant serving environments
+Feature attribution instability under ensemble distillation with student capacity mismatch and saliency map drift across compression stages in post-hoc interpretability pipelines
+Reward shaping interference under auxiliary task co-training in multi-objective reinforcement learning with policy gradient variance amplification and Pareto front instability
+Activation quantization error propagation under mixed-precision inference with outlier channel sensitivity and dynamic range collapse in post-training quantization schemes
+Tokenizer boundary misalignment under domain-shifted vocabulary extension with subword fertility drift and embedding space fragmentation in continual pretraining regimes
+Sparse attention pattern collapse under dynamic sequence length variation with head specialization erosion and receptive field truncation in sliding-window transformer inference
+Optimizer state corruption under checkpoint-resume asymmetry with momentum buffer staleness and adaptive learning rate miscalibration across distributed training interruptions
+Cross-modal representation drift under frozen encoder fine-tuning with modality gap widening and alignment loss saturation in vision-language model adaptation
+Prefill latency explosion under prompt template bloat with redundant token encoding overhead and attention complexity scaling in high-throughput production inference pipelines
+Gradient conflicts under simultaneous multi-objective loss weighting with Pareto front instability and task interference amplification in dense prediction architectures
+Speculative decoding tree width collapse under adversarial prompt distribution shift with draft model divergence and verification overhead asymmetry in latency-sensitive serving
+Retrieval index fragmentation under concurrent write-heavy workloads with approximate neighbor drift and query latency variance in real-time embedding update pipelines
+Layer normalization saturation under extreme activation magnitude variance with scale parameter explosion and gradient flow obstruction in deep residual networks during low-data fine-tuning
+Tokenizer vocabulary collision under multilingual code-switching with subword boundary ambiguity and cross-script embedding interference in low-resource language model adaptation
+Sparse reward propagation delay in hierarchical reinforcement learning with credit assignment ambiguity and subgoal boundary misalignment under long-horizon task decomposition
+Quantization error accumulation asymmetry across transformer depth with outlier activation concentration and mixed-precision boundary artifacts in post-training int4 deployment
+Cross-attention key-value bottleneck under high-resolution visual token inflation with spatial information compression loss and grounding degradation in multimodal encoder-decoder architectures
+Optimizer state memory fragmentation under dynamic sequence length batching with gradient accumulation skew and effective batch size drift in large-scale distributed fine-tuning
+Continual pretraining domain interference with catastrophic backward transfer and embedding space topology disruption under sequential corpus injection in foundation model adaptation

@@ -1,0 +1,72 @@
+[
+  {
+    "Id": "ITM001",
+    "Name": "Data Block Alpha",
+    "Value": 17,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.6035259Z"
+  },
+  {
+    "Id": "ITM002",
+    "Name": "Data Block Beta",
+    "Value": 23,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.6035736Z"
+  },
+  {
+    "Id": "ITM003",
+    "Name": "Data Block Gamma",
+    "Value": 29,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.6035736Z"
+  },
+  {
+    "Id": "ITM004",
+    "Name": "Data Block Delta",
+    "Value": 31,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.6035737Z"
+  },
+  {
+    "Id": "ITM005",
+    "Name": "Resource Pack 1",
+    "Value": 100,
+    "Category": "Resource",
+    "CreatedAt": "2025-12-31T19:18:07.6035738Z"
+  },
+  {
+    "Id": "ITM006",
+    "Name": "Resource Pack 2",
+    "Value": 150,
+    "Category": "Resource",
+    "CreatedAt": "2025-12-31T19:18:07.6035739Z"
+  },
+  {
+    "Id": "ITM007",
+    "Name": "Data Block Epsilon",
+    "Value": 37,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.6035739Z"
+  },
+  {
+    "Id": "ITM008",
+    "Name": "Data Block Zeta",
+    "Value": 41,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.603574Z"
+  },
+  {
+    "Id": "ITM009",
+    "Name": "Resource Pack 3",
+    "Value": 200,
+    "Category": "Resource",
+    "CreatedAt": "2025-12-31T19:18:07.6035741Z"
+  },
+  {
+    "Id": "ITM010",
+    "Name": "Data Block Theta",
+    "Value": 43,
+    "Category": "Prime",
+    "CreatedAt": "2025-12-31T19:18:07.6035741Z"
+  }
+]

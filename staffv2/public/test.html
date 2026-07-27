@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Staff Bot Test</title>
+</head>
+<body>
+  <h1>Staff Bot API Test</h1>
+  <button onclick="testConfig()">Test Config API</button>
+  <button onclick="testAsk()">Test Ask API</button>
+  <pre id="output"></pre>
+  
+  <script>
+    const API_BASE = 'http://localhost:3006';
+    
+    async function testConfig() {
+      try {
+        const res = await fetch(`${API_BASE}/health`);
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        document.getElementById('output').textContent = 'Error: ' + err.message;
+      }
+    }
+    
+    async function testAsk() {
+      try {
+        const res = await fetch(`${API_BASE}/api/ask`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt: 'Hello' })
+        });
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        document.getElementById('output').textContent = 'Error: ' + err.message;
+      }
+    }
+  </script>
+</body>
+</html>

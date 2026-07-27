@@ -1,0 +1,10 @@
+node: method.core
+id: select_method
+signature: (problem_space, registry_space) -> plan_space
+preconditions:
+  - problem_space.has(:subproblems_for_root)
+postconditions:
+  - plan_space.has(:plan_for_root)
+traps:
+  - no_applicable_methods
+transform_ref: impl.select_method

@@ -1,0 +1,7 @@
+# muvu1 - File Path Edge Orientation System
+# Python 3.8+ required
+
+# GUI Framework (built-in with Python)
+# tkinter - comes with Python standard library
+
+# No external dependencies required for basic functionality

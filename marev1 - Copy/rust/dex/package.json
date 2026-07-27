@@ -1,0 +1,36 @@
+{
+  "name": "marev-dex",
+  "version": "1.0.0",
+  "description": "MAREV DEX - Decentralized Exchange on Base",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network base",
+    "deploy:attention": "hardhat run scripts/deploy-attention-v1.js --network base",
+    "deploy:attention:activity": "hardhat run scripts/deploy-attention-activity-rewards.js --network base",
+    "deploy:attention:base-sepolia": "hardhat run scripts/deploy-attention-v1.js --network base-sepolia",
+    "attention:merkle": "node scripts/attention-build-merkle.js",
+    "attention:sync:vercel": "node scripts/attention-sync-vercel.js",
+    "attention:factory-input": "node scripts/attention-build-factory-day.js",
+    "attention:merge-inputs": "node scripts/attention-merge-inputs.js",
+    "attention:submit": "hardhat run scripts/attention-submit-day.js --network base",
+    "deploy:base-sepolia": "hardhat run scripts/deploy.js --network base-sepolia",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia"
+  },
+  "keywords": [
+    "dex",
+    "base",
+    "ethereum"
+  ],
+  "author": "fitzyracing1",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.4"
+  }
+}
