@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sandboxed WASM Runner",
+  "version": "1.0.0",
+  "description": "Runs a bundled WebAssembly program in a fresh, isolated sandbox on every run. No remote code, no special permissions.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sandboxed WASM Runner"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
