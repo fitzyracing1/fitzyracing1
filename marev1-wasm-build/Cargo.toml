@@ -1,0 +1,19 @@
+[package]
+name = "marev1_wasm"
+version = "0.1.0"
+edition = "2021"
+
+# Ported from marev1/src/block.rs (proof-of-work mining) for WebAssembly.
+# Compiles to a plain cdylib .wasm — no wasm-bindgen, no JS glue needed.
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+sha2 = "0.10"
+
+[profile.release]
+opt-level = "z"
+lto = true
+panic = "abort"
+strip = true
